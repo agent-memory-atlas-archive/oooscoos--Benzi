@@ -50,15 +50,14 @@
 - [What the index actually changes](#what-the-index-actually-changes) — lines read vs three other harnesses
 - [Features](#features) · [Language support](#language-support) · [Getting started](#getting-started)
 - [FAQ](#faq) — privacy, API keys, pricing, limits
-- [Bonus: reading DOOM's source](#bonus-demo-reading-a-real-codebase-doom--c)
 
 ---
 
 ## What is Benzi
 
-Most AI coding agents dump a repository into a context window and hope the model finds what matters. Benzi works differently: before answering anything, a real compiler — built on tree-sitter — parses every file in the project and resolves it into a precise, queryable map. Every symbol, every call edge, every reference, every class in its inheritance chain. One pass, done.
+Most AI coding agents dump a repo into a context window and hope the model finds what matters. Benzi parses every file first — a real compiler, built on tree-sitter — into a precise, queryable map. Every symbol, every call edge, every reference, every class in its inheritance chain. One pass, done.
 
-Every file parsed, imports resolved, class ancestry built, every identifier traced to its definition — before a single question is answered. Call flow and data flow are joined at every call site, so a bad value traces to its origin in one tool call. Claude Code greps; Cursor embeds; Aider maps signatures; Benzi resolves — and answers in O(1). Every language runs its own tree-sitter grammar into that same compiled map — ten so far, plus a second engine for markup (HTML, CSS, DOM-JS) — see [Language support](#language-support) below.
+Every file parsed, imports resolved, class ancestry built, every identifier traced to its definition — before a single question is answered. Call flow and data flow join at every call site, so a bad value traces to its origin in one tool call. Claude Code greps; Cursor embeds; Aider maps signatures; Benzi resolves — in O(1). Ten languages so far, plus a markup engine for HTML, CSS, and DOM-JS — see [Language support](#language-support).
 
 You can try pasting this repo's link to Benzi in the [live demo](https://varianttech.net/demo) too!
 
@@ -235,19 +234,3 @@ On CodeGraph's own benchmark (their repos, their questions, their methodology), 
 
 **My language isn't Python — how much do I lose?**
 The structural index — symbols, calls, references, inheritance, data flow — is the same across all ten languages. Only the runtime tracer is Python-only, and depth varies by language — see [Language support](#language-support).
-
-## BONUS DEMO: Reading a real codebase: DOOM · C
-
-Everyone says DOOM's engine was ahead of its time. Almost nobody has opened `z_zone.c` to see why. So we pointed Benzi at it. A few things were worth writing down.
-
-**There is no `malloc()` during gameplay.** id (the developer) wrote their own memory allocator — one big arena grabbed once at startup, sliced into blocks tagged by how precious they are (`PU_STATIC`, `PU_LEVEL`, `PU_CACHE`...). The genius part: allocating new memory can silently evict old "cache" blocks it walks past along the way — no one calls `free()`, the allocator just decides your cached texture is cheap to regenerate and reclaims the space on the spot. That's cache-eviction policy baked directly into the allocation path itself. `malloc`/`free` still can't do that today.
-
-**There's no floating point math, anywhere, in the renderer.** `tables.c` is a 2,000+ line file that is almost entirely one thing: every sine, tangent and arctangent value the engine will ever need, precomputed at compile time into lookup tables. Movement, angles, rendering — all fixed-point integer math against these tables. Not every '93 machine had an FPU, and even where it did, table lookups beat live trig every time.
-
-**The whole screen is just a byte array — and "UI" isn't a system, it's a coincidence.** `screens[0]` is a flat 320×200 buffer, one byte per pixel. The 3D world gets drawn into it column by column. Then the HUD gets stamped on top using the exact same pixel-blitting function used to draw monster sprites and gun sprites. There is no UI toolkit, no widget tree, because there was nothing to build one on top of: the game owns the entire display, full stop. A health digit and a demon sprite are the same kind of draw call.
-
-**Collision detection has its own hand-rolled spatial index.** `p_maputl.c` splits the map into a grid (the "blockmap") so hit detection only checks nearby geometry instead of scanning every wall in the level — a spatial hash, built from scratch, years before that was a common technique people talked about.
-
-None of this was over-engineering. Every one of these systems exists because the standard answer (`malloc`, floats, a GUI library, brute-force collision) either didn't exist on the target hardware or would have been too slow.
-
-*Explored with Benzi — an AI that reads codebases like this one directly, instead of guessing from memory.*
