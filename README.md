@@ -146,19 +146,19 @@ Same 24 bugs, one run each, four harness/model combinations. **Lines read** coun
 Every harness opens more source as bugs get harder — the question is the slope. Benzi's stays flatter because it answers most of what a bug needs from the map instead of by reading.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/chart_lines_read.png" width="600" alt="Source lines read per bug, all four harnesses">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/chart_lines_read.png" width="780" alt="Source lines read per bug, all four harnesses">
 </p>
 
 Benzi reads the least source on every bug and the gap widens as bugs get harder — the index answers most of what a fix needs before a file is ever opened.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/chart_wall_clock.png" width="600" alt="Wall-clock time per bug, all four harnesses">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/chart_wall_clock.png" width="780" alt="Wall-clock time per bug, all four harnesses">
 </p>
 
 Wall-clock time tracks close across all four — reading less doesn't make Benzi slower to think, just cheaper to look.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/chart_cost.png" width="600" alt="Cost per fix, all four harnesses">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/chart_cost.png" width="780" alt="Cost per fix, all four harnesses">
 </p>
 
 Benzi on DeepSeek costs about a cent a bug; Claude Code climbs to $0.18 a step as bugs get harder — roughly 18x.
