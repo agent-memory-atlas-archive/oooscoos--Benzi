@@ -9,12 +9,10 @@
 
 <h1 align="center">Benzi<br><sub>by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/variant_logo.png" width="16" alt=""> <b>Variant Technologies</b></sub></h1>
 
-<p align="center"><b>An AI coding agent that doesn't read — it <i>queries</i>.</b></p>
-
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi" alt="PyPI version"></a>
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi" alt="Python versions"></a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=varianttech.benzi"><img src="https://img.shields.io/visual-studio-marketplace/v/varianttech.benzi" alt="VS Code Marketplace version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-red" alt="License"></a>
 </p>
 
 <p align="center">Benzi is free to use — actively in development, a work in progress.</p>
@@ -196,6 +194,8 @@ One compiler, ten languages: tree-sitter is the only real dependency and each la
 
 **Depth across the ten is uneven, and we would rather say so than let you find out.** Python is the deepest, and the only one with the runtime tracer. Every language reaches the core of the map, but each one also has constructs of its own, and not all of them are modelled yet — so a question that leans on something particular to your language may come back thinner than the same question asked about Python. We know about some of these; we certainly don't know about all of them, and the list moves as they get closed.
 
+Incremental reindexing — re-parsing only what changed instead of the whole project — is also less optimized for C, C++, Rust, and Ruby than the rest. It works, just not as fast on a large edit loop.
+
 If Benzi answers something wrong, or thin, in your language, please [open an issue](https://github.com/oooscoos/Benzi/issues) — the repo, the question, and what it got wrong. A bad answer is the most useful bug report there is, and it is how the uneven parts get found.
 
 ## Getting started
@@ -212,9 +212,7 @@ Run `benzi_login` once to authenticate before using the VS Code extension, MCP, 
 ## FAQ
 
 **How do I get at it — API, CLI, SDK, MCP, my own harness?**
-The CLI and MCP are here now — see [Getting started](#getting-started) above. Benzi is not meant to be a chat window you visit; it is an AI-native code intelligence layer, and a layer is only worth the name if whatever you already work in can call it.
-
-`pip install benzi` gets you both: `benzi`, the same agent as the browser and VS Code, from your own terminal, and `benzi-mcp`, the same compiled index exposed as tools over MCP for whatever agent you already run — Claude Code, Cursor, your own harness. An SDK and a hosted API still sit on that same index but aren't out yet.
+`pip install benzi` gets you both: `benzi`, the same agent as the browser and VS Code, from your own terminal, and `benzi-mcp`, the same compiled index exposed as tools over MCP for whatever agent you already run — Claude Code, Cursor, your own harness. The [VS Code extension](https://marketplace.visualstudio.com/items?itemName=varianttech.benzi) is a separate install, straight from the Marketplace (or search "Benzi" inside VS Code's own Extensions panel) — no `pip` needed for that one. An SDK and a hosted API still sit on that same index but aren't out yet.
 
 **Does my code leave my machine?**
 In VS Code, the CLI, or over MCP, the compiler runs locally: your project is parsed on your machine, the index is built there, and it stays there. Nothing is uploaded, nothing is embedded into a vector store, and no copy of your repo is kept anywhere. What does leave is the same thing that leaves with any AI assistant — the specific snippets the agent actually reads while answering you go to the model as part of the prompt, straight from your machine to your own provider on the CLI and MCP, never through Benzi's servers. Reading less is the point of the index: on the 24-bug comparison Benzi opened **9,125** lines where Claude Code opened 20,704, so there is materially less of your code in flight. The browser demo is different by nature — it downloads a *public* repo to the server, works on it read-only for your session, and deletes it when the session ends.
