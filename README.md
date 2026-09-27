@@ -7,7 +7,7 @@
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icon.png" width="120" alt="Benzi">
 </p>
 
-<h1 align="center">Benzi<br><sub>A compiler-backed AI agent by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/variant_logo.png" width="20" alt=""> <b>Variant Technologies</b></sub></h1>
+<h1 align="center">Benzi<br><sub><small>Compiler-backed code intelligence by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/variant_logo.png" width="20" alt=""> <b>Variant Technologies</b></small></sub></h1>
 
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi" alt="PyPI version"></a>
