@@ -18,11 +18,11 @@
 <p align="center">Benzi is free to use — actively in development, a work in progress.</p>
 
 <p align="center">
-  <a href="https://benzi.fly.dev">Live&nbsp;demo</a> &nbsp;·&nbsp;
-  <a href="https://benzi.fly.dev/benchmark">Benchmark</a> &nbsp;·&nbsp;
+  <a href="https://varianttech.net/demo">Live&nbsp;demo</a> &nbsp;·&nbsp;
+  <a href="https://varianttech.net/benchmark">Benchmark</a> &nbsp;·&nbsp;
   <a href="https://marketplace.visualstudio.com/items?itemName=varianttech.benzi">VS&nbsp;Code&nbsp;Marketplace</a> &nbsp;·&nbsp;
-  <a href="https://benzi.fly.dev/about">Website</a> &nbsp;·&nbsp;
-  <a href="https://benzi.fly.dev/horse_tinder">StallionSwipe&nbsp;demo</a>
+  <a href="https://varianttech.net/about">Website</a> &nbsp;·&nbsp;
+  <a href="https://varianttech.net/horse_tinder">StallionSwipe&nbsp;demo</a>
 </p>
 
 <p align="center">
@@ -90,11 +90,11 @@ The full SWE-bench Verified set — 500 real GitHub issues from twelve Python re
 | Input tokens served from cache | 97% |
 | Output tokens | 22.0M |
 
-Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.md) ([web version](https://benzi.fly.dev/report)). Every instance's cost, tokens, turns, and lines read: [benzi.fly.dev/benchmark_swebench](https://benzi.fly.dev/benchmark_swebench). The cross-harness efficiency comparison below (and the full 24-bug chart): [benzi.fly.dev/benchmark](https://benzi.fly.dev/benchmark).
+Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.md) ([web version](https://varianttech.net/report)). Every instance's cost, tokens, turns, and lines read: [varianttech.net/benchmark_swebench](https://varianttech.net/benchmark_swebench). The cross-harness efficiency comparison below (and the full 24-bug chart): [varianttech.net/benchmark](https://varianttech.net/benchmark).
 
 ## Live demos
 
-**[StallionSwipe](BENZI_GREENFIELDING_EXAMPLES/horse_tinder/) · Python, HTML, CSS, JS** — a dating app for horses, greenfielded by Benzi from scratch in a single chat session. No image is a file: every horse portrait is procedural SVG, generated in code. Match with one and it flirts back through a real model, live. Frontend, backend, and the prompts — all written by Benzi. [Try it live](https://benzi.fly.dev/horse_tinder).
+**[StallionSwipe](BENZI_GREENFIELDING_EXAMPLES/horse_tinder/) · Python, HTML, CSS, JS** — a dating app for horses, greenfielded by Benzi from scratch in a single chat session. No image is a file: every horse portrait is procedural SVG, generated in code. Match with one and it flirts back through a real model, live. Frontend, backend, and the prompts — all written by Benzi. [Try it live](https://varianttech.net/horse_tinder).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht2.jpeg" width="200" alt="StallionSwipe swipe deck">
@@ -103,9 +103,9 @@ Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht1.jpeg" width="200" alt="StallionSwipe profile creation">
 </p>
 
-**[VS Code's own source, resolved](https://benzi.fly.dev/about) · TypeScript** — the real `microsoft/vscode` repo is 1.8M lines; this indexes 923k of them: the editor core (`src/vs/editor` + `src/vs/base`), the platform services layer, and workbench's shell/API/browser plumbing — deliberately excluding the 747k-line grab-bag of individual features in `workbench/contrib`. Built once, in just over two minutes, then cached. [Try it live](https://benzi.fly.dev/about) (chat panel, near the bottom of the page).
+**[VS Code's own source, resolved](https://varianttech.net/about) · TypeScript** — the real `microsoft/vscode` repo is 1.8M lines; this indexes 923k of them: the editor core (`src/vs/editor` + `src/vs/base`), the platform services layer, and workbench's shell/API/browser plumbing — deliberately excluding the 747k-line grab-bag of individual features in `workbench/contrib`. Built once, in just over two minutes, then cached. [Try it live](https://varianttech.net/about) (chat panel, near the bottom of the page).
 
-**Or, try any repo of your choice at all here** — point Benzi at any public GitHub repo and it builds the index live. [benzi.fly.dev](https://benzi.fly.dev).
+**Or, try any repo of your choice at all here** — point Benzi at any public GitHub repo and it builds the index live. [varianttech.net/demo](https://varianttech.net/demo).
 
 ## How it works
 
@@ -113,7 +113,9 @@ Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.
 2. **Query.** The agent reads and plans through structured tools over that index — `profile`, `get_callers`, `backflow`, `trace_path`, `skim_source`, ~30 more.
 3. **Edit, gated.** Every write is checked against the real parser; a broken parse auto-reverts. Blast radius — the changed symbol, its callers, its holders, the relevant tests — is checked going in and again once the write lands.
 4. **Verify by running it.** A focused repro runs under a runtime tracer alongside the tests blast-radius flagged. Real values, real dispatch: this proves the change and settles the map — ambiguous edges collapse onto whatever target actually fired.
-5. **Reindex, incrementally.** Every turn re-parses only what changed on disk — your edits and the agent's, treated the same. Undo reloads a pre-write snapshot instead of re-deriving one. The next question always answers against the code as it is now. Back to step 2.
+5. **Reindex, incrementally.** Every turn re-parses only what changed on disk — your edits and the agent's, treated the same.
+6. **Revert, from a snapshot.** Every write snapshots the index first, so undo reloads that snapshot instead of re-deriving it.
+7. **Back to step 2.** The next question always answers against the code as it is now.
 
 ## Tools
 
@@ -169,7 +171,7 @@ Wall-clock time tracks close across all four — reading less doesn't make Benzi
 
 Benzi on DeepSeek costs about a cent a bug; Claude Code climbs to $0.18 a step as bugs get harder — roughly 18x.
 
-More detail, per-bug breakdowns, and full methodology: [benzi.fly.dev/benchmark](https://benzi.fly.dev/benchmark).
+More detail, per-bug breakdowns, and full methodology: [varianttech.net/benchmark](https://varianttech.net/benchmark).
 
 ## Features
 
@@ -184,19 +186,19 @@ More detail, per-bug breakdowns, and full methodology: [benzi.fly.dev/benchmark]
 
 **Python · JavaScript · TypeScript · Java · C# · C++ · C · Go · Rust · Ruby**
 
-One compiler, ten languages: tree-sitter is the only real dependency and each language is a grammar plugin, so the core of the map — symbols, call edges, references, inheritance, data flow — is built the same way everywhere.
+One compiler, ten languages — each is a tree-sitter grammar plugin, so the core of the map (symbols, call edges, references, inheritance, data flow) is built the same way everywhere.
 
-**Depth across the ten is uneven, and we would rather say so than let you find out.** Python is the deepest, and the only one with the runtime tracer. Every language reaches the core of the map, but each one also has constructs of its own, and not all of them are modelled yet — so a question that leans on something particular to your language may come back thinner than the same question asked about Python. We know about some of these; we certainly don't know about all of them, and the list moves as they get closed.
+**Depth is uneven, and we'd rather say so than let you find out.** Python is deepest, and the only one with the runtime tracer. Every language reaches the core of the map, but each has its own constructs, not all modelled yet — a question specific to your language may come back thinner than the same question in Python.
 
-Incremental reindexing — re-parsing only what changed instead of the whole project — is also less optimized for C, C++, Rust, and Ruby than the rest. It works, just not as fast on a large edit loop.
+Incremental reindexing is also less optimized for C, C++, Rust, and Ruby — it works, just not as fast on a large edit loop.
 
-If Benzi answers something wrong, or thin, in your language, please [open an issue](https://github.com/oooscoos/Benzi/issues) — the repo, the question, and what it got wrong. A bad answer is the most useful bug report there is, and it is how the uneven parts get found.
+Wrong or thin answer in your language? [Open an issue](https://github.com/oooscoos/Benzi/issues) with the repo, the question, and what it got wrong — that's how the uneven parts get found.
 
 ## Getting started
 
 Benzi is completely free to use.
 
-- **In the browser** — paste any public GitHub repo at [benzi.fly.dev](https://benzi.fly.dev); no install, no signup. Read-only: ask it questions, explore the map, nothing writes to the repo. This is the demo — click here to see what it can do.
+- **In the browser** — paste any public GitHub repo at [varianttech.net/demo](https://varianttech.net/demo); no install, no signup. Read-only: ask it questions, explore the map, nothing writes to the repo. This is the demo — click here to see what it can do.
 - **In VS Code** — the same compiler, but with edit access: chat, graph, and Benzi actually writing code in your own project. [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=varianttech.benzi). This is the real tool — click here to use it.
 - **MCP** — the same compiled index, exposed as tools over MCP for whatever agent you already run: Claude Code, Cursor, or your own harness. `pip install benzi`, then point your MCP client at `benzi-mcp`. This is the benzi index without the agentic loop — output quality will depend on your agent/harness.
 - **Headless** — the same agent as VS Code, from your own terminal: `pip install benzi`, then `benzi <repo> "your question"`. This is Benzi for scripts and CI — no editor needed.
@@ -229,7 +231,7 @@ They search — grep or embeddings. Benzi resolves first: a real index of symbol
 **How is this different from CodeGraph?**
 Both index instead of search, but CodeGraph **retrieves** — ranked candidates from a queried database. Benzi **resolves** — settles what a name binds to before answering, and refuses rather than guesses when a call site is ambiguous. It also models code the way an engineer reads it — file → scopes → call flow → data/control flow — not a flat symbol graph.
 
-On CodeGraph's own benchmark (their repos, their questions, their methodology), four models blind-judged Benzi's MCP answers first. Full results: [benzi.fly.dev/benchmark_codegraph](https://benzi.fly.dev/benchmark_codegraph).
+On CodeGraph's own benchmark (their repos, their questions, their methodology), four models blind-judged Benzi's MCP answers first. Full results: [varianttech.net/benchmark_codegraph](https://varianttech.net/benchmark_codegraph).
 
 **My language isn't Python — how much do I lose?**
 The structural index — symbols, calls, references, inheritance, data flow — is the same across all ten languages. Only the runtime tracer is Python-only, and depth varies by language — see [Language support](#language-support).
