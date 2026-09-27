@@ -11,6 +11,12 @@
 
 <p align="center"><b>An AI coding agent that doesn't read — it <i>queries</i>.</b></p>
 
+<p align="center">
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi" alt="Python versions"></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=varianttech.benzi"><img src="https://img.shields.io/visual-studio-marketplace/v/varianttech.benzi" alt="VS Code Marketplace version"></a>
+</p>
+
 <p align="center">Benzi is free to use — actively in development, a work in progress.</p>
 
 <p align="center">
