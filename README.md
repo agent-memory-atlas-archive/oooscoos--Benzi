@@ -4,7 +4,7 @@
   below are intentional.
 -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icon.png" width="120" alt="Benzi">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icon.png" width="150" alt="Benzi">
 </p>
 
 <h1 align="center">Benzi<br><sub><small>Compiler-backed code intelligence by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/variant_logo.png" width="20" alt=""> <b>Variant Technologies</b></small></sub></h1>
@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_on_sqlite.png" width="700" alt="Benzi on SQLite">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_on_sqlite.png" width="900" alt="Benzi on SQLite">
   <br>
   <sub>Benzi on SQLite</sub>
 </p>
