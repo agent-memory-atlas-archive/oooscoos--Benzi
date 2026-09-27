@@ -109,11 +109,11 @@ Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.
 
 ## How it works
 
-1. **Compile.** Tree-sitter parses every file; imports are resolved, class ancestry built, every identifier traced to its definition. The output is an index, not a blob of text.
-2. **Query.** The agent answers questions and plans edits through structured tools over that index — `profile`, `get_callers`, `backflow`, `trace_path`, `skim_source`, and ~30 more.
-3. **Edit, gated.** Every write passes syntax and semantic gates against the real language parser — a broken parse auto-reverts. The model checks blast radius *before* it changes anything, not just after: the same analysis — the changed symbol, its callers, its holders, the selectively relevant existing tests — runs both going in and once a write lands.
-4. **Verify by running it.** A focused, context-aware repro is generated against the exact change and run under a runtime tracer, alongside the selectively relevant existing tests the same blast-radius analysis surfaced. The tracer records what actually happened — real argument values, real returns, real dispatch — which both proves the change and settles the map: proven edges gain live counts, ambiguous ones collapse onto the target that fired, and the callbacks and thread targets static analysis cannot see even in principle finally show up.
-5. **Reindex, incrementally.** The map follows the filesystem, never the agent's account of what it did. Each turn re-stats the tree and re-parses only the files whose bytes actually moved — the agent's own writes and the files you saved in your own editor between turns are treated identically, because neither is trusted over what is on disk. Undo runs the other way and is cheaper still: every write snapshots the whole index first, so a revert — yours or the agent's — reloads that snapshot outright instead of re-deriving it. Either way the next question is answered against the code as it is now, which is what stops small errors compounding: an agent working from a map of the code as it *used to be* will keep building on an edit that already went wrong. Then back to step 2, against the current map.
+1. **Compile.** Tree-sitter parses every file, resolves imports, builds class ancestry, traces every identifier to its definition. Output is an index, not text.
+2. **Query.** The agent reads and plans through structured tools over that index — `profile`, `get_callers`, `backflow`, `trace_path`, `skim_source`, ~30 more.
+3. **Edit, gated.** Every write is checked against the real parser; a broken parse auto-reverts. Blast radius — the changed symbol, its callers, its holders, the relevant tests — is checked going in and again once the write lands.
+4. **Verify by running it.** A focused repro runs under a runtime tracer alongside the tests blast-radius flagged. Real values, real dispatch: this proves the change and settles the map — ambiguous edges collapse onto whatever target actually fired.
+5. **Reindex, incrementally.** Every turn re-parses only what changed on disk — your edits and the agent's, treated the same. Undo reloads a pre-write snapshot instead of re-deriving one. The next question always answers against the code as it is now. Back to step 2.
 
 ## Tools
 
@@ -206,35 +206,33 @@ Run `benzi_login` once to authenticate before using the VS Code extension, MCP, 
 ## FAQ
 
 **How do I get at it — API, CLI, SDK, MCP, my own harness?**
-`pip install benzi` gets you both: `benzi`, the same agent as the browser and VS Code, from your own terminal, and `benzi-mcp`, the same compiled index exposed as tools over MCP for whatever agent you already run — Claude Code, Cursor, your own harness. The [VS Code extension](https://marketplace.visualstudio.com/items?itemName=varianttech.benzi) is a separate install, straight from the Marketplace (or search "Benzi" inside VS Code's own Extensions panel) — no `pip` needed for that one. An SDK and a hosted API still sit on that same index but aren't out yet.
+`pip install benzi` gives you `benzi` (the CLI agent) and `benzi-mcp` (the same index over MCP, for Claude Code, Cursor, your own harness). The [VS Code extension](https://marketplace.visualstudio.com/items?itemName=varianttech.benzi) is a separate Marketplace install. SDK and hosted API aren't out yet.
 
 **Does my code leave my machine?**
-In VS Code, the CLI, or over MCP, the compiler runs locally: your project is parsed on your machine, the index is built there, and it stays there. Nothing is uploaded, nothing is embedded into a vector store, and no copy of your repo is kept anywhere. What does leave is the same thing that leaves with any AI assistant — the specific snippets the agent actually reads while answering you go to the model as part of the prompt, straight from your machine to your own provider on the CLI and MCP, never through Benzi's servers. Reading less is the point of the index: on the 24-bug comparison Benzi opened **9,125** lines where Claude Code opened 20,704, so there is materially less of your code in flight. The browser demo is different by nature — it downloads a *public* repo to the server, works on it read-only for your session, and deletes it when the session ends.
+No. In VS Code, the CLI, or MCP, the compiler and index run locally — nothing uploaded, no copy kept. Only the snippets the agent actually reads go to your model provider, same as any AI assistant, and less of them: **9,125** lines read vs Claude Code's 20,704 on the same 24 bugs. The browser demo differs — it fetches a *public* repo server-side, read-only, deletes it after your session.
 
 **Do I need an API key?**
-For the browser demo, no — there's no key to get, no provider account to create, no config file. For the VS Code extension, MCP, and the headless CLI, yes: run `benzi_login` once to bring your own Anthropic or OpenAI-compatible key.
+No, for the browser demo. Yes for VS Code, MCP, and the CLI — run `benzi_login` once with your own key.
 
 **Is it actually free?**
-Yes — Benzi itself doesn't charge, on any surface. The browser demo and VS Code extension need nothing else at all; the CLI and MCP are BYOK, so you pay your own model provider for usage, same as running any other tool with your own key. Benzi is early and actively in development — that's the trade you're making, not a paywall.
+Yes, Benzi doesn't charge. The CLI and MCP are BYOK, so you pay your own model provider. Early and in development — that's the trade, not a paywall.
 
 **Can I point it at a private repo?**
-Not on the web demo — that's public repos only, fetched over the public GitHub API with no credentials. Everywhere else (VS Code, the CLI, MCP), yes: all three analyze whatever local path you point them at, private or not, because the compiler runs locally.
+Not the web demo (public GitHub API only). Everywhere else, yes — the compiler runs locally on whatever path you give it.
 
 **How large a repo can it handle?**
-VS Code handles real codebases — `microsoft/vscode` at 923k indexed lines builds in just over two minutes, then caches. The browser demo is capped at 2,000 analyzable files and skips individual files over 2 MB, so a very large repo will be refused there but works fine in the extension.
+VS Code handles real codebases — `microsoft/vscode`, 923k lines, indexes in ~2 minutes, then caches. The browser demo caps at 2,000 files, 2 MB each.
 
 **How is this different from Cursor, Copilot, or Claude Code?**
-They find code by searching text — grep, or embedding similarity. Benzi resolves it first: a tree-sitter compiler builds a real index of symbols, call edges, inheritance and data flow, and the agent queries that index instead of guessing which files to read. The practical difference is in [what the index actually changes](#what-the-index-actually-changes) — the same 24 bugs, 2.3× less source read than Claude Code on the same model.
+They search — grep or embeddings. Benzi resolves first: a real index of symbols, calls, inheritance, data flow, queried instead of guessed. Same 24 bugs, 2.3× less source read than Claude Code. Details: [what the index actually changes](#what-the-index-actually-changes).
 
 **How is this different from CodeGraph?**
-CodeGraph is the closest comparison there is, because it's the other tool that indexes rather than searches — but the difference is approach, not just scope. CodeGraph **retrieves**: its index is a database, queried with full-text search and ranked by a walk over the graph, and what comes back is the set of candidates most likely to be relevant. Benzi **resolves**: the compiler settles what a name actually binds to before any question is asked, so a query returns the answer rather than a ranked list to sift. Retrieval improves as its ranking improves; resolution is either correct or honestly refuses — which is why Benzi has an unresolved tier at all, and why it will tell you a call site is ambiguous instead of picking the likeliest target.
+Both index instead of search, but CodeGraph **retrieves** — ranked candidates from a queried database. Benzi **resolves** — settles what a name binds to before answering, and refuses rather than guesses when a call site is ambiguous. It also models code the way an engineer reads it — file → scopes → call flow → data/control flow — not a flat symbol graph.
 
-The second difference is what gets modelled. Benzi's index is not a traditional symbol map — every declaration in the repo as a node, every reference as an edge, complete and flat. It is shaped the way an engineer reads unfamiliar code: **file → scopes → call flow → data and control flow**, each level answering the question the previous one raises. That is the level the work actually happens at, which is what makes the index usable by a model rather than only by a graph browser.
-
-Benzi also exposes its index over MCP, which is the nearer apples-to-apples comparison. We ran CodeGraph's own benchmark — their six repos, their questions, their published methodology — on Claude Sonnet 5, and had four models (Gemini, DeepSeek, Claude, ChatGPT) score every answer from a fresh chat with no shared context. All four ranked Benzi Product first. Full answers, scores and reasoning: [benzi.fly.dev/benchmark_codegraph](https://benzi.fly.dev/benchmark_codegraph).
+On CodeGraph's own benchmark (their repos, their questions, their methodology), four models blind-judged Benzi's MCP answers first. Full results: [benzi.fly.dev/benchmark_codegraph](https://benzi.fly.dev/benchmark_codegraph).
 
 **My language isn't Python — how much do I lose?**
-The structural map is built the same way in all ten languages: symbols, call edges, references, inheritance, data flow. So a Go or TypeScript project gets a real index and real navigation. Two things differ. The runtime tracer is Python-only — it executes code and records real calls and values, and nothing else has that yet. And depth varies by language: constructs particular to one language aren't all modelled yet — see [Language support](#language-support).
+The structural index — symbols, calls, references, inheritance, data flow — is the same across all ten languages. Only the runtime tracer is Python-only, and depth varies by language — see [Language support](#language-support).
 
 ## BONUS DEMO: Reading a real codebase: DOOM · C
 
