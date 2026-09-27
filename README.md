@@ -7,22 +7,22 @@
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icon.png" width="120" alt="Benzi">
 </p>
 
-<h1 align="center">Benzi<br><sub>by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/variant_logo.png" width="16" alt=""> <b>Variant Technologies</b></sub></h1>
+<h1 align="center">Benzi<br><sub>A compiler-backed AI agent by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/variant_logo.png" width="20" alt=""> <b>Variant Technologies</b></sub></h1>
 
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi" alt="PyPI version"></a>
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi" alt="Python versions"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-red" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-blue" alt="License"></a>
 </p>
 
 <p align="center">Benzi is free to use — actively in development, a work in progress.</p>
 
 <p align="center">
-  <a href="https://benzi.fly.dev/horse_tinder">StallionSwipe&nbsp;demo</a> &nbsp;·&nbsp;
-  <a href="https://benzi.fly.dev/about">Website</a> &nbsp;·&nbsp;
-  <a href="https://benzi.fly.dev">Live demo</a> &nbsp;·&nbsp;
+  <a href="https://benzi.fly.dev">Live&nbsp;demo</a> &nbsp;·&nbsp;
   <a href="https://benzi.fly.dev/benchmark">Benchmark</a> &nbsp;·&nbsp;
-  <a href="https://marketplace.visualstudio.com/items?itemName=varianttech.benzi">VS&nbsp;Code&nbsp;Marketplace</a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=varianttech.benzi">VS&nbsp;Code&nbsp;Marketplace</a> &nbsp;·&nbsp;
+  <a href="https://benzi.fly.dev/about">Website</a> &nbsp;·&nbsp;
+  <a href="https://benzi.fly.dev/horse_tinder">StallionSwipe&nbsp;demo</a>
 </p>
 
 <p align="center">
@@ -43,7 +43,7 @@
 - [Tools](#tools) — 16 of the 35+ the index makes possible
 - [What the index actually changes](#what-the-index-actually-changes) — lines read vs three other harnesses
 - [Features](#features) · [Language support](#language-support) · [Getting started](#getting-started)
-- [FAQ](#faq) — privacy, MCP, pricing, limits
+- [FAQ](#faq) — privacy, API keys, pricing, limits
 - [Bonus: reading DOOM's source](#bonus-demo-reading-a-real-codebase-doom--c)
 
 ---
@@ -55,18 +55,6 @@ Most AI coding agents dump a repository into a context window and hope the model
 Every file parsed, imports resolved, class ancestry built, every identifier traced to its definition — before a single question is answered. Call flow and data flow are joined at every call site, so a bad value traces to its origin in one tool call. Claude Code greps; Cursor embeds; Aider maps signatures; Benzi resolves — and answers in O(1). Every language runs its own tree-sitter grammar into that same compiled map — ten so far, plus a second engine for markup (HTML, CSS, DOM-JS) — see [Language support](#language-support) below.
 
 You can try pasting this repo's link to Benzi too!
-
-<p align="center">
-  <a href="https://benzi.fly.dev"><img src="https://img.shields.io/badge/Try_the_Demo_(Any_Repo)-1E7A5C?style=for-the-badge" alt="Try the demo (any repo)"></a>
-  <br><br>
-  <a href="https://benzi.fly.dev/horse_tinder"><img src="https://img.shields.io/badge/See_What_Benzi_Can_Build-1E7A5C?style=for-the-badge" alt="See what Benzi can build"></a>
-  <br><br>
-  <a href="https://benzi.fly.dev/benchmark"><img src="https://img.shields.io/badge/Benchmarks_and_SWE_bench_Report-1E7A5C?style=for-the-badge" alt="Benchmarks and SWE-bench report"></a>
-  <br><br>
-  <a href="https://marketplace.visualstudio.com/items?itemName=varianttech.benzi"><img src="https://img.shields.io/badge/Get_Benzi_for_VS_Code-1E7A5C?style=for-the-badge" alt="Get Benzi for VS Code"></a>
-  <br><br>
-  <a href="https://benzi.fly.dev/about"><img src="https://img.shields.io/badge/Visit_the_Website-1E7A5C?style=for-the-badge" alt="Visit the website"></a>
-</p>
 
 ## What people say
 
