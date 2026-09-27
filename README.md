@@ -31,6 +31,10 @@
   <sub>Benzi on SQLite</sub>
 </p>
 
+<p align="center">
+  <a href="https://varianttech.net/demo"><img src="https://img.shields.io/badge/Try_It_Now-1E7A5C?style=for-the-badge" alt="Try it now"></a>
+</p>
+
 ---
 
 ## Contents
