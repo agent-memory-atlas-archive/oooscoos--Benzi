@@ -34,7 +34,7 @@
 <br>
 
 <p align="center">
-  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_try_it_live.png" width="280" alt="Try it live"></a>
+  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_try_now.png" width="220" alt="Try now"></a>
 </p>
 
 ---
