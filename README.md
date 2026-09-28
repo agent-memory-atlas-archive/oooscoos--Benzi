@@ -3,9 +3,9 @@
   render on GitHub but break on the Marketplace page, so the raw GitHub URLs
   below are intentional.
 -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark.png" width="110" alt="Benzi">
-</p>
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+<h2 align="center">Benzi</h2>
 
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=E6B800" alt="PyPI version" height="17"></a>
@@ -252,3 +252,5 @@ On CodeGraph's own benchmark (their repos, their questions, their methodology), 
 
 **My language isn't Python — how much do I lose?**
 The structural index — symbols, calls, references, inheritance, data flow — is the same across all ten languages. Only the runtime tracer is Python-only, and depth varies by language — see [Language support](#language-support).
+
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
