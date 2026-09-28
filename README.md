@@ -28,7 +28,7 @@
   <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="94" alt="Benchmarks"></a>
 </p>
 
----
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
 <div align="center">
 
@@ -46,7 +46,7 @@
 
 </div>
 
----
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
 ## What is Benzi
 
