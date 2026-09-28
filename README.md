@@ -7,7 +7,7 @@
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner.png" width="1000" alt="Benzi -- compiler-backed code intelligence">
 </p>
 
-<h1 align="center">Benzi</h1>
+<h3 align="center">Benzi</h3>
 
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=17B06C" alt="PyPI version"></a>
