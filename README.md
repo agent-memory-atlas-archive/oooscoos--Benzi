@@ -36,8 +36,8 @@
 
 [What is Benzi](#what-is-benzi) — how it works in one paragraph
 <br>[What people say](#what-people-say) — what people wrote about it
-<br>[SWE-bench Verified](#swe-bench-verified) — 391/500 (78.2%) for $37.33
 <br>[Live demos](#live-demos) — StallionSwipe, VS Code's own source, or any repo you paste
+<br>[SWE-bench Verified](#swe-bench-verified) — 391/500 (78.2%) for $37.33
 <br>[How it works](#how-it-works) — compile, query, edit, verify
 <br>[Tools](#tools) — 16 of the 35+ the index makes possible
 <br>[What the index actually changes](#what-the-index-actually-changes) — lines read vs three other harnesses
@@ -76,6 +76,21 @@ You can try pasting this repo's link to Benzi in the [live demo](https://variant
 > "It analyzes changes before writing them — and beats Claude Code on benchmarks."
 > — [**Ponte al dIA**](https://ponte-al-dia.com/p/benzi-agente-de-codigo-que-supera-a-claude-sonnet-en-tareas-de-programacion) *(translated)*
 
+## Live demos
+
+**[StallionSwipe](BENZI_GREENFIELDING_EXAMPLES/horse_tinder/) · Python, HTML, CSS, JS** — a dating app for horses, greenfielded by Benzi from scratch in a single chat session. No image is a file: every horse portrait is procedural SVG, generated in code. Match with one and it flirts back through a real model, live. Frontend, backend, and the prompts — all written by Benzi. [Try it live](https://varianttech.net/horse_tinder).
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht2.jpeg" width="200" alt="StallionSwipe swipe deck">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht4.jpeg" width="200" alt="StallionSwipe profile detail">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht3.jpeg" width="200" alt="StallionSwipe live AI chat">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht1.jpeg" width="200" alt="StallionSwipe profile creation">
+</p>
+
+**[VS Code's own source, resolved](https://varianttech.net/about) · TypeScript** — the real `microsoft/vscode` repo is 1.8M lines; this indexes 923k of them: the editor core (`src/vs/editor` + `src/vs/base`), the platform services layer, and workbench's shell/API/browser plumbing — deliberately excluding the 747k-line grab-bag of individual features in `workbench/contrib`. Built once, in just over two minutes, then cached. [Try it live](https://varianttech.net/about) (chat panel, near the bottom of the page).
+
+**Or, try any repo of your choice at all here** — point Benzi at any public GitHub repo and it builds the index live. [varianttech.net/demo](https://varianttech.net/demo).
+
 ## SWE-bench Verified
 
 The full SWE-bench Verified set — 500 real GitHub issues from twelve Python repositories — run end to end on **DeepSeek v4-flash**, one attempt per instance, graded by the official `swebench.harness.run_evaluation` inside its own per-instance Docker images, with network access to GitHub and PyPI blocked inside every container.
@@ -91,21 +106,6 @@ The full SWE-bench Verified set — 500 real GitHub issues from twelve Python re
 | Output tokens | 22.0M |
 
 Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.md) ([web version](https://varianttech.net/report)). Every instance's cost, tokens, turns, and lines read: [varianttech.net/benchmark_swebench](https://varianttech.net/benchmark_swebench). The cross-harness efficiency comparison below (and the full 24-bug chart): [varianttech.net/benchmark](https://varianttech.net/benchmark).
-
-## Live demos
-
-**[StallionSwipe](BENZI_GREENFIELDING_EXAMPLES/horse_tinder/) · Python, HTML, CSS, JS** — a dating app for horses, greenfielded by Benzi from scratch in a single chat session. No image is a file: every horse portrait is procedural SVG, generated in code. Match with one and it flirts back through a real model, live. Frontend, backend, and the prompts — all written by Benzi. [Try it live](https://varianttech.net/horse_tinder).
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht2.jpeg" width="200" alt="StallionSwipe swipe deck">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht4.jpeg" width="200" alt="StallionSwipe profile detail">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht3.jpeg" width="200" alt="StallionSwipe live AI chat">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/stallionswipe/ht1.jpeg" width="200" alt="StallionSwipe profile creation">
-</p>
-
-**[VS Code's own source, resolved](https://varianttech.net/about) · TypeScript** — the real `microsoft/vscode` repo is 1.8M lines; this indexes 923k of them: the editor core (`src/vs/editor` + `src/vs/base`), the platform services layer, and workbench's shell/API/browser plumbing — deliberately excluding the 747k-line grab-bag of individual features in `workbench/contrib`. Built once, in just over two minutes, then cached. [Try it live](https://varianttech.net/about) (chat panel, near the bottom of the page).
-
-**Or, try any repo of your choice at all here** — point Benzi at any public GitHub repo and it builds the index live. [varianttech.net/demo](https://varianttech.net/demo).
 
 ## How it works
 
