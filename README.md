@@ -4,27 +4,10 @@
   below are intentional.
 -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icon.png" width="150" alt="Benzi">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner.png" width="1000" alt="Benzi -- compiler-backed code intelligence">
 </p>
 
-<h1 align="center">Benzi<br><sub><small>Compiler-backed code intelligence by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/variant_logo.png" width="20" alt=""> <b>Variant Technologies</b></small></sub></h1>
-
-<p align="center">
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=17B06C" alt="PyPI version"></a>
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=17B06C" alt="Python versions"></a>
-  <img src="https://img.shields.io/badge/MCP-compatible-17B06C" alt="MCP compatible">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-17B06C" alt="License"></a>
-</p>
-
-<p align="center">Benzi is free to use — actively in development, a work in progress.</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_on_sqlite.png" width="900" alt="Benzi on SQLite">
-  <br>
-  <sub>Benzi on SQLite</sub>
-</p>
-
-<br>
+<h1 align="center">Benzi</h1>
 
 <p align="center">
   <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_try_now_v2.png" width="160" alt="Try now"></a>
@@ -34,6 +17,15 @@
   <a href="#faq"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_faq.png" width="115" alt="FAQ"></a>
   &nbsp;&nbsp;
   <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="115" alt="Benchmarks"></a>
+</p>
+
+<br>
+
+<p align="center">
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=17B06C" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=17B06C" alt="Python versions"></a>
+  <img src="https://img.shields.io/badge/MCP-compatible-17B06C" alt="MCP compatible">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-17B06C" alt="License"></a>
 </p>
 
 ---
