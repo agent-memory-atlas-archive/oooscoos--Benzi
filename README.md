@@ -205,9 +205,6 @@ Run `benzi_login` once to authenticate before using the VS Code extension, MCP, 
 
 ## FAQ
 
-**How do I get at it — API, CLI, SDK, MCP, my own harness?**
-`pip install benzi` gives you `benzi` (the CLI agent) and `benzi-mcp` (the same index over MCP, for Claude Code, Cursor, your own harness). The [VS Code extension](https://marketplace.visualstudio.com/items?itemName=varianttech.benzi) is a separate Marketplace install. SDK and hosted API aren't out yet.
-
 **Does my code leave my machine?**
 No. In VS Code, the CLI, or MCP, the compiler and index run locally — nothing uploaded, no copy kept. Only the snippets the agent actually reads go to your model provider, same as any AI assistant, and less of them: **9,125** lines read vs Claude Code's 20,704 on the same 24 bugs. The browser demo differs — it fetches a *public* repo server-side, read-only, deletes it after your session.
 
