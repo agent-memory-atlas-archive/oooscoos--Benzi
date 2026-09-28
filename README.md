@@ -4,10 +4,8 @@
   below are intentional.
 -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner.png" width="1000" alt="Benzi -- compiler-backed code intelligence">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark.png" width="220" alt="Benzi">
 </p>
-
-<h3 align="center">Benzi</h3>
 
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=17B06C" alt="PyPI version"></a>
@@ -16,7 +14,9 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-17B06C" alt="License"></a>
 </p>
 
-<br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner.png" width="1000" alt="Benzi -- compiler-backed code intelligence">
+</p>
 
 <p align="center">
   <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_try_now_v2.png" width="160" alt="Try now"></a>
