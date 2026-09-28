@@ -8,10 +8,10 @@
 </p>
 
 <p align="center">
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=EACC33" alt="PyPI version" height="16"></a>
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=EACC33" alt="Python versions" height="16"></a>
-  <img src="https://img.shields.io/badge/MCP-compatible-EACC33" alt="MCP compatible" height="16">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-EACC33" alt="License" height="16"></a>
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=8C7A1E" alt="PyPI version" height="17"></a>
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=8C7A1E" alt="Python versions" height="17"></a>
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/badge_mcp.png" alt="MCP compatible" height="17">
+  <a href="LICENSE"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/badge_license.png" alt="License" height="17"></a>
 </p>
 
 <p align="center">
@@ -19,13 +19,13 @@
 </p>
 
 <p align="center">
-  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_try_now_v2.png" width="120" alt="Try now"></a>
+  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_try_now_v2.png" width="132" alt="Try now"></a>
   <br><br>
-  <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_download.png" width="85" alt="Download"></a>
-  &nbsp;&nbsp;
-  <a href="#faq"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_faq.png" width="85" alt="FAQ"></a>
-  &nbsp;&nbsp;
-  <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="85" alt="Benchmarks"></a>
+  <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_download.png" width="94" alt="Download"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#faq"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_faq.png" width="94" alt="FAQ"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="94" alt="Benchmarks"></a>
 </p>
 
 ---
