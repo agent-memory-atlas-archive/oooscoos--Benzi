@@ -10,6 +10,15 @@
 <h1 align="center">Benzi</h1>
 
 <p align="center">
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=17B06C" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=17B06C" alt="Python versions"></a>
+  <img src="https://img.shields.io/badge/MCP-compatible-17B06C" alt="MCP compatible">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-17B06C" alt="License"></a>
+</p>
+
+<br>
+
+<p align="center">
   <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_try_now_v2.png" width="160" alt="Try now"></a>
   <br><br>
   <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_download.png" width="115" alt="Download"></a>
@@ -17,15 +26,6 @@
   <a href="#faq"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_faq.png" width="115" alt="FAQ"></a>
   &nbsp;&nbsp;
   <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="115" alt="Benchmarks"></a>
-</p>
-
-<br>
-
-<p align="center">
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=17B06C" alt="PyPI version"></a>
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=17B06C" alt="Python versions"></a>
-  <img src="https://img.shields.io/badge/MCP-compatible-17B06C" alt="MCP compatible">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-17B06C" alt="License"></a>
 </p>
 
 ---
