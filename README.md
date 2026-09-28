@@ -5,7 +5,9 @@
 -->
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
-<h2 align="center">Benzi</h2>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark.png" width="170" alt="Benzi">
+</p>
 
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=E6B800" alt="PyPI version" height="17"></a>
@@ -101,6 +103,8 @@ You can try pasting this repo's link to Benzi in the [live demo](https://variant
 
 The full SWE-bench Verified set — 500 real GitHub issues from twelve Python repositories — run end to end on **DeepSeek v4-flash**, one attempt per instance, graded by the official `swebench.harness.run_evaluation` inside its own per-instance Docker images, with network access to GitHub and PyPI blocked inside every container.
 
+<div align="center">
+
 | | |
 |:---:|:---:|
 | **Resolved** | **391 / 500 — 78.2%** |
@@ -110,6 +114,8 @@ The full SWE-bench Verified set — 500 real GitHub issues from twelve Python re
 | Model turns (total / median) | 16,091 / 27 |
 | Input tokens served from cache | 97% |
 | Output tokens | 22.0M |
+
+</div>
 
 Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.md) ([web version](https://varianttech.net/report)). Every instance's cost, tokens, turns, and lines read: [varianttech.net/benchmark_swebench](https://varianttech.net/benchmark_swebench). The cross-harness efficiency comparison below (and the full 24-bug chart): [varianttech.net/benchmark](https://varianttech.net/benchmark).
 
@@ -131,6 +137,8 @@ Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.
 
 A sample of 16 of Benzi's 35+ tools — what falls out of actually resolving the code, from the index itself to the gates on every write.
 
+<div align="center">
+
 | Tool | What it answers |
 |:---:|:---:|
 | `get_callers` | Every call site that reaches a function — the code that will feel a change. |
@@ -150,11 +158,15 @@ A sample of 16 of Benzi's 35+ tools — what falls out of actually resolving the
 | `rollback_edit` | Undoes the last writes by snapshot reload, not by re-editing. |
 | `upgrade_to_pro` | Escalates itself to a larger reasoning budget mid-task. |
 
+</div>
+
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
 ### <u>What the index actually changes</u>
 
 Same 24 bugs, one run each, four harness/model combinations. **Lines read** counts only what came back from file-read calls — grep and shell output are search, not reading, so this is the one figure that means the same thing in every harness.
+
+<div align="center">
 
 | Harness · model | Lines read | vs Benzi |
 |:---:|:---:|:---:|
@@ -162,6 +174,8 @@ Same 24 bugs, one run each, four harness/model combinations. **Lines read** coun
 | Benzi · DeepSeek | 16,407 | 1.8× |
 | Claude Code · Sonnet | 20,704 | 2.3× |
 | DeepSeek Harness · DeepSeek | 43,598 | 4.8× |
+
+</div>
 
 Every harness opens more source as bugs get harder — the question is the slope. Benzi's stays flatter because it answers most of what a bug needs from the map instead of by reading.
 
