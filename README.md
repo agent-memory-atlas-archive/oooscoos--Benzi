@@ -52,6 +52,12 @@ Every file parsed, imports resolved, class ancestry built, every identifier trac
 
 You can try pasting this repo's link to Benzi in the [live demo](https://varianttech.net/demo) too!
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_on_sqlite.png" width="900" alt="Benzi on SQLite">
+  <br>
+  <sub>Benzi on SQLite</sub>
+</p>
+
 ## What people say
 
 > "78.2% for $37 is a slap in the face to the 'brute force wins' school."
