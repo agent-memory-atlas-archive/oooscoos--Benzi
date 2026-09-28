@@ -10,10 +10,10 @@
 <h1 align="center">Benzi<br><sub><small>Compiler-backed code intelligence by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/variant_logo.png" width="20" alt=""> <b>Variant Technologies</b></small></sub></h1>
 
 <p align="center">
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi" alt="PyPI version"></a>
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi" alt="Python versions"></a>
-  <img src="https://img.shields.io/badge/MCP-compatible-blue" alt="MCP compatible">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-blue" alt="License"></a>
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=1E7A5C" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=1E7A5C" alt="Python versions"></a>
+  <img src="https://img.shields.io/badge/MCP-compatible-1E7A5C" alt="MCP compatible">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-1E7A5C" alt="License"></a>
 </p>
 
 <p align="center">Benzi is free to use — actively in development, a work in progress.</p>
