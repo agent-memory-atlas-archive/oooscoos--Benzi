@@ -35,8 +35,8 @@
 ## Contents
 
 [What is Benzi](#what-is-benzi) — how it works in one paragraph
-<br>[What people say](#what-people-say) — what people wrote about it
 <br>[Live demos](#live-demos) — StallionSwipe, VS Code's own source, or any repo you paste
+<br>[What people say](#what-people-say) — what people wrote about it
 <br>[SWE-bench Verified](#swe-bench-verified) — 391/500 (78.2%) for $37.33
 <br>[How it works](#how-it-works) — compile, query, edit, verify
 <br>[Tools](#tools) — 16 of the 35+ the index makes possible
@@ -62,20 +62,6 @@ You can try pasting this repo's link to Benzi in the [live demo](https://variant
   <sub>Benzi on SQLite</sub>
 </p>
 
-## What people say
-
-> "78.2% for $37 is a slap in the face to the 'brute force wins' school."
-> — Alex Xiang, [**zicode**](https://zicode.com/blog/ai-coding-supply-chain/) *(translated)*
-
-> "Benzi is proving that the core competency of coding tools is shifting from simple 'reading comprehension' to 'structural grasping ability.'"
-> — Gi Pyeong Lee, [**Tech Blog**](https://gipyeong-lee.github.io/2026/09/11/Show-HN-Benzi-A-Code-IntillegenceHarness-Beating-Claude-Code-and-CodeGraph.en/)
-
-> "Fewer tokens, no context drift. Wild idea, honestly."
-> — [**prompt 🤖 AI News**](https://t.me/prompt/392)
-
-> "It analyzes changes before writing them — and beats Claude Code on benchmarks."
-> — [**Ponte al dIA**](https://ponte-al-dia.com/p/benzi-agente-de-codigo-que-supera-a-claude-sonnet-en-tareas-de-programacion) *(translated)*
-
 ## Live demos
 
 **[StallionSwipe](BENZI_GREENFIELDING_EXAMPLES/horse_tinder/) · Python, HTML, CSS, JS** — a dating app for horses, greenfielded by Benzi from scratch in a single chat session. No image is a file: every horse portrait is procedural SVG, generated in code. Match with one and it flirts back through a real model, live. Frontend, backend, and the prompts — all written by Benzi. [Try it live](https://varianttech.net/horse_tinder).
@@ -90,6 +76,20 @@ You can try pasting this repo's link to Benzi in the [live demo](https://variant
 **[VS Code's own source, resolved](https://varianttech.net/about) · TypeScript** — the real `microsoft/vscode` repo is 1.8M lines; this indexes 923k of them: the editor core (`src/vs/editor` + `src/vs/base`), the platform services layer, and workbench's shell/API/browser plumbing — deliberately excluding the 747k-line grab-bag of individual features in `workbench/contrib`. Built once, in just over two minutes, then cached. [Try it live](https://varianttech.net/about) (chat panel, near the bottom of the page).
 
 **Or, try any repo of your choice at all here** — point Benzi at any public GitHub repo and it builds the index live. [varianttech.net/demo](https://varianttech.net/demo).
+
+## What people say
+
+> "78.2% for $37 is a slap in the face to the 'brute force wins' school."
+> — Alex Xiang, [**zicode**](https://zicode.com/blog/ai-coding-supply-chain/) *(translated)*
+
+> "Benzi is proving that the core competency of coding tools is shifting from simple 'reading comprehension' to 'structural grasping ability.'"
+> — Gi Pyeong Lee, [**Tech Blog**](https://gipyeong-lee.github.io/2026/09/11/Show-HN-Benzi-A-Code-IntillegenceHarness-Beating-Claude-Code-and-CodeGraph.en/)
+
+> "Fewer tokens, no context drift. Wild idea, honestly."
+> — [**prompt 🤖 AI News**](https://t.me/prompt/392)
+
+> "It analyzes changes before writing them — and beats Claude Code on benchmarks."
+> — [**Ponte al dIA**](https://ponte-al-dia.com/p/benzi-agente-de-codigo-que-supera-a-claude-sonnet-en-tareas-de-programacion) *(translated)*
 
 ## SWE-bench Verified
 
