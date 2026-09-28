@@ -19,14 +19,6 @@
 <p align="center">Benzi is free to use — actively in development, a work in progress.</p>
 
 <p align="center">
-  <a href="https://varianttech.net/demo">Live&nbsp;demo</a> &nbsp;·&nbsp;
-  <a href="https://varianttech.net/benchmark">Benchmark</a> &nbsp;·&nbsp;
-  <a href="https://marketplace.visualstudio.com/items?itemName=varianttech.benzi">VS&nbsp;Code&nbsp;Marketplace</a> &nbsp;·&nbsp;
-  <a href="https://varianttech.net/about">Website</a> &nbsp;·&nbsp;
-  <a href="https://varianttech.net/horse_tinder">StallionSwipe&nbsp;demo</a>
-</p>
-
-<p align="center">
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_on_sqlite.png" width="900" alt="Benzi on SQLite">
   <br>
   <sub>Benzi on SQLite</sub>
@@ -36,6 +28,10 @@
 
 <p align="center">
   <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_try_now_v2.png" width="160" alt="Try now"></a>
+  <br><br>
+  <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_download.png" width="160" alt="Download"></a>
+  <br><br>
+  <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="160" alt="Benchmark"></a>
 </p>
 
 ---
