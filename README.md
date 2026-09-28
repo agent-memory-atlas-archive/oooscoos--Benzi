@@ -4,7 +4,7 @@
   below are intentional.
 -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark.png" width="100" alt="Benzi">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark.png" width="110" alt="Benzi">
 </p>
 
 <p align="center">
@@ -34,15 +34,15 @@
 
 ## Contents
 
-- [What is Benzi](#what-is-benzi) — how it works in one paragraph
-- [What people say](#what-people-say) — what people wrote about it
-- [SWE-bench Verified](#swe-bench-verified) — 391/500 (78.2%) for $37.33
-- [Live demos](#live-demos) — StallionSwipe, VS Code's own source, or any repo you paste
-- [How it works](#how-it-works) — compile, query, edit, verify
-- [Tools](#tools) — 16 of the 35+ the index makes possible
-- [What the index actually changes](#what-the-index-actually-changes) — lines read vs three other harnesses
-- [Features](#features) · [Language support](#language-support) · [Getting started](#getting-started)
-- [FAQ](#faq) — privacy, API keys, pricing, limits
+[What is Benzi](#what-is-benzi) — how it works in one paragraph
+<br>[What people say](#what-people-say) — what people wrote about it
+<br>[SWE-bench Verified](#swe-bench-verified) — 391/500 (78.2%) for $37.33
+<br>[Live demos](#live-demos) — StallionSwipe, VS Code's own source, or any repo you paste
+<br>[How it works](#how-it-works) — compile, query, edit, verify
+<br>[Tools](#tools) — 16 of the 35+ the index makes possible
+<br>[What the index actually changes](#what-the-index-actually-changes) — lines read vs three other harnesses
+<br>[Features](#features) · [Language support](#language-support) · [Getting started](#getting-started)
+<br>[FAQ](#faq) — privacy, API keys, pricing, limits
 
 </div>
 
