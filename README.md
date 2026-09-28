@@ -29,9 +29,9 @@
 <p align="center">
   <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_try_now_v2.png" width="160" alt="Try now"></a>
   <br><br>
-  <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_download.png" width="160" alt="Download"></a>
-  <br><br>
-  <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="160" alt="Benchmark"></a>
+  <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_download.png" width="115" alt="Download"></a>
+  &nbsp;&nbsp;
+  <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="115" alt="Benchmark"></a>
 </p>
 
 ---
