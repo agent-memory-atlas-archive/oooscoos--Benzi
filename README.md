@@ -32,7 +32,7 @@
 
 <div align="center">
 
-## Contents
+### Contents
 
 [What is Benzi](#what-is-benzi) — how it works in one paragraph
 <br>[Live demos](#live-demos) — StallionSwipe, VS Code's own source, or any repo you paste
@@ -48,7 +48,7 @@
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
-## What is Benzi
+### What is Benzi
 
 Most AI coding agents dump a repo into a context window and hope the model finds what matters. Benzi parses every file first — a real compiler, built on tree-sitter — into a precise, queryable map. Every symbol, every call edge, every reference, every class in its inheritance chain. One pass, done.
 
@@ -62,7 +62,9 @@ You can try pasting this repo's link to Benzi in the [live demo](https://variant
   <sub>Benzi on SQLite</sub>
 </p>
 
-## Live demos
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### Live demos
 
 **[StallionSwipe](BENZI_GREENFIELDING_EXAMPLES/horse_tinder/) · Python, HTML, CSS, JS** — a dating app for horses, greenfielded by Benzi from scratch in a single chat session. No image is a file: every horse portrait is procedural SVG, generated in code. Match with one and it flirts back through a real model, live. Frontend, backend, and the prompts — all written by Benzi. [Try it live](https://varianttech.net/horse_tinder).
 
@@ -77,7 +79,9 @@ You can try pasting this repo's link to Benzi in the [live demo](https://variant
 
 **Or, try any repo of your choice at all here** — point Benzi at any public GitHub repo and it builds the index live. [varianttech.net/demo](https://varianttech.net/demo).
 
-## What people say
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### What people say
 
 > "78.2% for $37 is a slap in the face to the 'brute force wins' school."
 > — Alex Xiang, [**zicode**](https://zicode.com/blog/ai-coding-supply-chain/) *(translated)*
@@ -91,7 +95,9 @@ You can try pasting this repo's link to Benzi in the [live demo](https://variant
 > "It analyzes changes before writing them — and beats Claude Code on benchmarks."
 > — [**Ponte al dIA**](https://ponte-al-dia.com/p/benzi-agente-de-codigo-que-supera-a-claude-sonnet-en-tareas-de-programacion) *(translated)*
 
-## SWE-bench Verified
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### SWE-bench Verified
 
 The full SWE-bench Verified set — 500 real GitHub issues from twelve Python repositories — run end to end on **DeepSeek v4-flash**, one attempt per instance, graded by the official `swebench.harness.run_evaluation` inside its own per-instance Docker images, with network access to GitHub and PyPI blocked inside every container.
 
@@ -107,7 +113,9 @@ The full SWE-bench Verified set — 500 real GitHub issues from twelve Python re
 
 Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.md) ([web version](https://varianttech.net/report)). Every instance's cost, tokens, turns, and lines read: [varianttech.net/benchmark_swebench](https://varianttech.net/benchmark_swebench). The cross-harness efficiency comparison below (and the full 24-bug chart): [varianttech.net/benchmark](https://varianttech.net/benchmark).
 
-## How it works
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### How it works
 
 1. **Compile.** Tree-sitter parses every file, resolves imports, builds class ancestry, traces every identifier to its definition. Output is an index, not text.
 2. **Query.** The agent reads and plans through structured tools over that index — `profile`, `get_callers`, `backflow`, `trace_path`, `skim_source`, ~30 more.
@@ -117,7 +125,9 @@ Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.
 6. **Revert, from a snapshot.** Every write snapshots the index first, so undo reloads that snapshot instead of re-deriving it.
 7. **Back to step 2.** The next question always answers against the code as it is now.
 
-## Tools
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### Tools
 
 A sample of 16 of Benzi's 35+ tools — what falls out of actually resolving the code, from the index itself to the gates on every write.
 
@@ -140,7 +150,9 @@ A sample of 16 of Benzi's 35+ tools — what falls out of actually resolving the
 | `rollback_edit` | Undoes the last writes by snapshot reload, not by re-editing. |
 | `upgrade_to_pro` | Escalates itself to a larger reasoning budget mid-task. |
 
-## What the index actually changes
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### What the index actually changes
 
 Same 24 bugs, one run each, four harness/model combinations. **Lines read** counts only what came back from file-read calls — grep and shell output are search, not reading, so this is the one figure that means the same thing in every harness.
 
@@ -173,7 +185,9 @@ Benzi on DeepSeek costs about a cent a bug; Claude Code climbs to $0.18 a step a
 
 More detail, per-bug breakdowns, and full methodology: [varianttech.net/benchmark](https://varianttech.net/benchmark).
 
-## Features
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### Features
 
 - **Six states, never a guess** — every call site and every file carries one: **resolved** (proven in-repo edge), **external** (into a library, with the import evidence), **candidate** (ambiguous — the bounded set of possible targets, kept in full), **unresolved** (seen but not settled, carrying *why*), **observed** (confirmed by an actual run), **unindexed** (never parsed, with the reason). One rule throughout: whatever static analysis can't settle is flagged as unsettled rather than guessed — and running the program is what settles it.
 - **Runtime tracer** — hooks every call during execution and overlays the observations back onto the static map.
@@ -182,7 +196,9 @@ More detail, per-bug breakdowns, and full methodology: [varianttech.net/benchmar
 - **Dual-engine: code + markup** — a separate index for HTML/CSS/DOM-JS with cascade resolution and selector specificity, including frontend embedded inside Python strings.
 - **Model-agnostic** — Anthropic, OpenAI, or any compatible API; the agent can escalate itself to a larger model mid-task when a problem outgrows the one running it.
 
-## Language support
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### Language support
 
 **Python · JavaScript · TypeScript · Java · C# · C++ · C · Go · Rust · Ruby**
 
@@ -194,7 +210,9 @@ Incremental reindexing is also less optimized for C, C++, Rust, and Ruby — it 
 
 Wrong or thin answer in your language? [Open an issue](https://github.com/oooscoos/Benzi/issues) with the repo, the question, and what it got wrong — that's how the uneven parts get found.
 
-## Getting started
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### Getting started
 
 Benzi is completely free to use.
 
@@ -205,7 +223,9 @@ Benzi is completely free to use.
 
 Run `benzi_login` once to authenticate before using the VS Code extension, MCP, or headless — the same command lets you update your model or key again later too.
 
-## FAQ
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### FAQ
 
 **Does my code leave my machine?**
 No. In VS Code, the CLI, or MCP, the compiler and index run locally — nothing uploaded, no copy kept. Only the snippets the agent actually reads go to your model provider, same as any AI assistant, and less of them: **9,125** lines read vs Claude Code's 20,704 on the same 24 bugs. The browser demo differs — it fetches a *public* repo server-side, read-only, deletes it after your session.
