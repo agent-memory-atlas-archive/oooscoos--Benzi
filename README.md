@@ -31,9 +31,9 @@
   <br><br>
   <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_download.png" width="115" alt="Download"></a>
   &nbsp;&nbsp;
-  <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="115" alt="Benchmark"></a>
-  &nbsp;&nbsp;
   <a href="#faq"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_faq.png" width="115" alt="FAQ"></a>
+  &nbsp;&nbsp;
+  <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta_benchmark.png" width="115" alt="Benchmarks"></a>
 </p>
 
 ---
