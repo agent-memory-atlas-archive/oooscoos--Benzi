@@ -12,6 +12,7 @@
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi" alt="PyPI version"></a>
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi" alt="Python versions"></a>
+  <img src="https://img.shields.io/badge/MCP-compatible-blue" alt="MCP compatible">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-blue" alt="License"></a>
 </p>
 
