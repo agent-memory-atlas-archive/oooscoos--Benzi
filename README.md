@@ -30,6 +30,8 @@
 
 ---
 
+<div align="center">
+
 ## Contents
 
 - [What is Benzi](#what-is-benzi) — how it works in one paragraph
@@ -41,6 +43,8 @@
 - [What the index actually changes](#what-the-index-actually-changes) — lines read vs three other harnesses
 - [Features](#features) · [Language support](#language-support) · [Getting started](#getting-started)
 - [FAQ](#faq) — privacy, API keys, pricing, limits
+
+</div>
 
 ---
 
