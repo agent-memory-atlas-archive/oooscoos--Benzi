@@ -10,8 +10,8 @@
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=8C7A1E" alt="PyPI version" height="17"></a>
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=8C7A1E" alt="Python versions" height="17"></a>
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/badge_mcp.png" alt="MCP compatible" height="17">
-  <a href="LICENSE"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/badge_license.png" alt="License" height="17"></a>
+  <img src="https://img.shields.io/badge/MCP-compatible-8C7A1E" alt="MCP compatible" height="17">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-8C7A1E" alt="License" height="17"></a>
 </p>
 
 <p align="center">
