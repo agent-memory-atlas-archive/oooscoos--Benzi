@@ -4,7 +4,7 @@
   below are intentional.
 -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark.png" width="220" alt="Benzi">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark.png" width="140" alt="Benzi">
 </p>
 
 <p align="center">
