@@ -235,7 +235,7 @@ Benzi is completely free to use.
 - **In the browser** — paste any public GitHub repo at [varianttech.net/demo](https://varianttech.net/demo); no install, no signup. Read-only: ask it questions, explore the map, nothing writes to the repo. This is the demo — click here to see what it can do.
 - **In VS Code** — the same compiler, but with edit access: chat, graph, and Benzi actually writing code in your own project. [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=varianttech.benzi). This is the real tool — click here to use it.
 - **MCP** — the same compiled index, exposed as tools over MCP for whatever agent you already run: Claude Code, Cursor, or your own harness. `pip install benzi`, then point your MCP client at `benzi-mcp`. This is the benzi index without the agentic loop — output quality will depend on your agent/harness.
-- **Headless** — the same agent as VS Code, from your own terminal: `pip install benzi`, then `benzi <repo> "your question"`. This is Benzi for scripts and CI — no editor needed.
+- **Headless** — the same agent as VS Code, from your own terminal: `pip install benzi`, then `benzi <repo> "your question"`. This is Benzi for scripts and CI — no editor needed. (https://pypi.org/project/benzi/)
 
 Run `benzi_login` once to authenticate before using the VS Code extension, MCP, or headless — the same command lets you update your model or key again later too.
 
