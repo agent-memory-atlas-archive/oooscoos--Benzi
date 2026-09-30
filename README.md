@@ -6,7 +6,7 @@
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark.png" width="158" alt="Benzi">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark.png" width="145" alt="Benzi">
 </p>
 
 <p align="center">Language Agnostic · Model Agnostic · Compiles Locally · BYOK · MCP Compatible</p>
