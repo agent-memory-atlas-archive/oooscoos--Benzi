@@ -264,6 +264,9 @@ They search — grep or embeddings. Benzi resolves first: a real index of symbol
 **How is this different from an LSP-backed MCP server?**
 An LSP answers at a cursor, in one open file: go-to-definition or find-references, one position and one hop at a time. Benzi compiles the whole repo up front into one index, so the questions are whole-codebase ones: transitive call trees, the path between two functions, and **data flow**, meaning where a bad value came from or where a return value lands. Every answer also carries a **confidence tier**: resolved, candidate, unresolved (with the reason), or observed. An LSP gives an answer or nothing. The **runtime tracer** then settles what static analysis can't by watching what actually fires. And the compiler itself is **language agnostic**: ten languages run through one pipeline into one index format. An LSP setup needs a separate server per language, each installed, configured and kept running.
 
+**How is this different from CodeQL or Sourcegraph's SCIP indexers?**
+They need a working build and index in batch: dependencies installed, the project compiling, a CI job measured in minutes. Benzi needs no build, works on half-finished code, and re-parses only what changed on every turn. That's what makes gated writes possible: each edit is checked against a fresh index before the next step, not after a rebuild. One pipeline covers all ten languages instead of one indexer per language. Where that costs precision, Benzi flags the call site as candidate or unresolved instead of guessing.
+
 **How is this different from CodeGraph?**
 Both index instead of search, but CodeGraph **retrieves** — ranked candidates from a queried database. Benzi **resolves** — settles what a name binds to before answering, and refuses rather than guesses when a call site is ambiguous. It also models code the way an engineer reads it — file → scopes → call flow → data/control flow — not a flat symbol graph.
 
