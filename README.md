@@ -261,6 +261,9 @@ VS Code handles real codebases — `microsoft/vscode`, 923k lines, indexes in ~2
 **How is this different from Cursor, Copilot, or Claude Code?**
 They search — grep or embeddings. Benzi resolves first: a real index of symbols, calls, inheritance, data flow, queried instead of guessed. Same 24 bugs, 2.3× less source read than Claude Code. Details: [what the index actually changes](#what-the-index-actually-changes).
 
+**How is this different from an LSP-backed MCP server?**
+An LSP answers at a cursor, in one open file: go-to-definition or find-references, one position and one hop at a time. Benzi compiles the whole repo up front into one index, so the questions are whole-codebase ones: transitive call trees, the path between two functions, and **data flow**, meaning where a bad value came from or where a return value lands. Every answer also carries a **confidence tier**: resolved, candidate, unresolved (with the reason), or observed. An LSP gives an answer or nothing. The **runtime tracer** then settles what static analysis can't by watching what actually fires. And the compiler itself is **language agnostic**: ten languages run through one pipeline into one index format. An LSP setup needs a separate server per language, each installed, configured and kept running.
+
 **How is this different from CodeGraph?**
 Both index instead of search, but CodeGraph **retrieves** — ranked candidates from a queried database. Benzi **resolves** — settles what a name binds to before answering, and refuses rather than guesses when a call site is ambiguous. It also models code the way an engineer reads it — file → scopes → call flow → data/control flow — not a flat symbol graph.
 
