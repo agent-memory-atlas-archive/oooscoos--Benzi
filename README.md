@@ -247,11 +247,11 @@ Run `benzi-login` once to authenticate before using the VS Code extension, MCP, 
 **Does my code leave my machine?**
 No. In VS Code, the CLI, or MCP, the compiler and index run locally — nothing uploaded, no copy kept. Only the snippets the agent actually reads go to your model provider, same as any AI assistant, and less of them: **9,125** lines read vs Claude Code's 20,704 on the same 24 bugs. The browser demo differs — it fetches a *public* repo server-side, read-only, deletes it after your session.
 
-**Do I need an API key?**
-No, for the browser demo. Yes for VS Code, MCP, and the CLI — run `benzi-login` once with your own key.
-
 **Is it actually free?**
 Yes, Benzi doesn't charge. The CLI and MCP are BYOK, so you pay your own model provider. Early and in development — that's the trade, not a paywall.
+
+**Can it run on a local model?**
+In principle, yes: Benzi talks to models through standard APIs, so a local model (Ollama, LM Studio and the like) could plug in. It isn't supported yet, though. Today Benzi runs on hosted providers with your own key.
 
 **Can I point it at a private repo?**
 Not the web demo (public GitHub API only). Everywhere else, yes — the compiler runs locally on whatever path you give it.
@@ -271,10 +271,7 @@ They need a working build and index in batch: dependencies installed, the projec
 **How is this different from CodeGraph?**
 Both index instead of search, but CodeGraph **retrieves** — ranked candidates from a queried database. Benzi **resolves** — settles what a name binds to before answering, and refuses rather than guesses when a call site is ambiguous. It also models code the way an engineer reads it — file → scopes → call flow → data/control flow — not a flat symbol graph.
 
-On CodeGraph's own benchmark (their repos, their questions, their methodology), four models blind-judged Benzi's MCP answers first. Full results: [varianttech.net/benchmark_codegraph](https://varianttech.net/benchmark_codegraph).
-
-**My language isn't Python — how much do I lose?**
-The structural index — symbols, calls, references, inheritance, data flow — is the same across all ten languages. Only the runtime tracer is Python-only, and depth varies by language — see [Language support](#language-support).
+On CodeGraph's own benchmark (their repos, their questions, their methodology), Gemini, ChatGPT, Claude and DeepSeek each reviewed the answers from a fresh account, and all four ranked Benzi's first. Full results: [varianttech.net/benchmark_codegraph](https://varianttech.net/benchmark_codegraph).
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
