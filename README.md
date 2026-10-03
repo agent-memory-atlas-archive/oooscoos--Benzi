@@ -14,8 +14,8 @@
 <p align="center">
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=97ca00&labelColor=000000" alt="PyPI version" height="17"></a>
   <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=97ca00&labelColor=000000" alt="Python versions" height="17"></a>
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fvarianttech.net%2Fbadge%2Fdownloads.json" alt="Downloads (PyPI + VS Code)" height="17"></a>
   <img src="https://img.shields.io/badge/MCP-compatible-97ca00?labelColor=000000" alt="MCP compatible" height="17">
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fvarianttech.net%2Fbadge%2Fdownloads.json" alt="Downloads (PyPI + VS Code)" height="17"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-97ca00?labelColor=000000" alt="License" height="17"></a>
 </p>
 
