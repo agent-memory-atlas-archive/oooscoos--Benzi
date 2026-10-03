@@ -47,7 +47,7 @@
 <br>[Tools](#tools) — 16 of the 35+ the index makes possible
 <br>[What the index actually changes](#what-the-index-actually-changes) — lines read vs three other harnesses
 <br>[Features](#features) · [Language support](#language-support) · [Getting started](#getting-started)
-<br>[FAQ](#faq) — privacy, API keys, pricing, limits
+<br>[FAQ & comparisons](#faq) — privacy, pricing, limits, and how Benzi compares
 
 </div>
 
@@ -242,7 +242,9 @@ Run `benzi-login` once to authenticate before using the VS Code extension, MCP, 
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
-### <u>FAQ</u>
+<a name="faq"></a>
+
+### <u>FAQ & comparisons</u>
 
 **Does my code leave my machine?**
 No. In VS Code, the CLI, or MCP, the compiler and index run locally — nothing uploaded, no copy kept. Only the snippets the agent actually reads go to your model provider, same as any AI assistant, and less of them: **9,125** lines read vs Claude Code's 20,704 on the same 24 bugs. The browser demo differs — it fetches a *public* repo server-side, read-only, deletes it after your session.
