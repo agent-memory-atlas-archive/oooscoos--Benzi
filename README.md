@@ -12,10 +12,11 @@
 <p align="center">Language Agnostic · Model Agnostic · Compiles Locally · BYOK · MCP Compatible</p>
 
 <p align="center">
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=E6B800" alt="PyPI version" height="17"></a>
-  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=E6B800" alt="Python versions" height="17"></a>
-  <img src="https://img.shields.io/badge/MCP-compatible-E6B800" alt="MCP compatible" height="17">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-E6B800" alt="License" height="17"></a>
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/v/benzi?color=97ca00&labelColor=000000" alt="PyPI version" height="17"></a>
+  <a href="https://pypi.org/project/benzi/"><img src="https://img.shields.io/pypi/pyversions/benzi?color=97ca00&labelColor=000000" alt="Python versions" height="17"></a>
+  <a href="https://pepy.tech/projects/benzi"><img src="https://img.shields.io/pepy/dt/benzi?color=97ca00&labelColor=000000&label=downloads" alt="PyPI downloads" height="17"></a>
+  <img src="https://img.shields.io/badge/MCP-compatible-97ca00?labelColor=000000" alt="MCP compatible" height="17">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-97ca00?labelColor=000000" alt="License" height="17"></a>
 </p>
 
 <p align="center">
@@ -235,9 +236,9 @@ Benzi is completely free to use.
 - **In the browser** — paste any public GitHub repo at [varianttech.net/demo](https://varianttech.net/demo); no install, no signup. Read-only: ask it questions, explore the map, nothing writes to the repo. This is the demo — click here to see what it can do.
 - **In VS Code** — the same compiler, but with edit access: chat, graph, and Benzi actually writing code in your own project. [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=varianttech.benzi). This is the real tool — click here to use it.
 - **MCP** — the same compiled index, exposed as tools over MCP for whatever agent you already run: Claude Code, Cursor, or your own harness. `pip install benzi`, then point your MCP client at `benzi-mcp`. This is the benzi index without the agentic loop — output quality will depend on your agent/harness.
-- **Headless** — the same agent as VS Code, from your own terminal: `pip install benzi`, then `benzi <repo> "your question"`. This is Benzi for scripts and CI — no editor needed. (https://pypi.org/project/benzi/)
+- **Headless** — the same agent as VS Code, from your own terminal: `pip install benzi`, then `benzi-headless <repo> "your question"`. This is Benzi for scripts and CI — no editor needed. (https://pypi.org/project/benzi/)
 
-Run `benzi_login` once to authenticate before using the VS Code extension, MCP, or headless — the same command lets you update your model or key again later too.
+Run `benzi-login` once to authenticate before using the VS Code extension, MCP, or headless — the same command lets you update your model or key again later too.
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
@@ -247,7 +248,7 @@ Run `benzi_login` once to authenticate before using the VS Code extension, MCP, 
 No. In VS Code, the CLI, or MCP, the compiler and index run locally — nothing uploaded, no copy kept. Only the snippets the agent actually reads go to your model provider, same as any AI assistant, and less of them: **9,125** lines read vs Claude Code's 20,704 on the same 24 bugs. The browser demo differs — it fetches a *public* repo server-side, read-only, deletes it after your session.
 
 **Do I need an API key?**
-No, for the browser demo. Yes for VS Code, MCP, and the CLI — run `benzi_login` once with your own key.
+No, for the browser demo. Yes for VS Code, MCP, and the CLI — run `benzi-login` once with your own key.
 
 **Is it actually free?**
 Yes, Benzi doesn't charge. The CLI and MCP are BYOK, so you pay your own model provider. Early and in development — that's the trade, not a paywall.
