@@ -238,7 +238,7 @@ Benzi is completely free to use.
 - **MCP** — the same compiled index, exposed as tools over MCP for whatever agent you already run: Claude Code, Cursor, or your own harness. `pip install benzi`, then point your MCP client at `benzi-mcp`. This is the benzi index without the agentic loop — output quality will depend on your agent/harness.
 - **Headless** — the same agent as VS Code, from your own terminal: `pip install benzi`, then `benzi-headless <repo> "your question"`. This is Benzi for scripts and CI — no editor needed. (https://pypi.org/project/benzi/)
 
-Setup is one time. In VS Code, the Benzi settings panel opens in the sidebar after install: pick a model, paste your key, log in with your email. For MCP and headless, run `benzi-login` once — the same command lets you update your model or key later too. Both write the same config, so setting up one sets up all of them.
+Run `benzi-login` once to authenticate before using the VS Code extension, MCP, or headless — the same command lets you update your model or key again later too. VS Code also has a Benzi settings panel in the left sidebar: use it to log in or update your email, model or key.
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
