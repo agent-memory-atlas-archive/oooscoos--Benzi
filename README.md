@@ -231,7 +231,7 @@ Wrong or thin answer in your language? [Open an issue](https://github.com/ooosco
 
 ### <u>Getting started</u>
 
-Benzi is completely free to use.
+Benzi is completely free to use during beta. All surfaces use the same `benzi-login` config.
 
 - **In the browser** — paste any public GitHub repo at [varianttech.net/demo](https://varianttech.net/demo); no install, no signup. Read-only: ask it questions, explore the map, nothing writes to the repo. This is the demo — click here to see what it can do.
 - **In VS Code** — the same compiler, but with edit access: chat, graph, and Benzi actually writing code in your own project. [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=varianttech.benzi). This is the real tool — click here to use it.
