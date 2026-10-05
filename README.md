@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner_v2.png" width="1000" alt="Benzi -- compiler-backed code intelligence">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner_v3.png" width="1000" alt="Benzi -- compiler-backed code intelligence">
 </p>
 
 <p align="center">
