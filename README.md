@@ -277,4 +277,4 @@ On CodeGraph's own benchmark (their repos, their questions, their methodology), 
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
-<p align="center"><sub>by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/variant_logo.png" width="16" alt=""> <b>Variant Technologies</b></sub></p>
+<p align="center"><sub>by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icons/variant_logo_circle.png" width="16" alt=""> <b>Variant Technologies</b></sub></p>
