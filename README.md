@@ -24,8 +24,8 @@
 </p>
 
 <p align="center">
-  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_demo.png" width="150" alt="Demo"></a>
-  <br><br>
+  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_demo.png" width="140" alt="Demo"></a>
+  <br>
   <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_download.png" width="136" alt="Download"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="#faq"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_faq.png" width="101" alt="FAQ"></a>
