@@ -235,10 +235,35 @@ Benzi is completely free to use during beta. All surfaces use the same `benzi-lo
 
 - **In the browser** — paste any public GitHub repo at [varianttech.net/demo](https://varianttech.net/demo); no install, no signup. Read-only: ask it questions, explore the map, nothing writes to the repo. This is the demo — click here to see what it can do.
 - **In VS Code** — the same compiler, but with edit access: chat, graph, and Benzi actually writing code in your own project. [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=varianttech.benzi). This is the real tool — click here to use it.
-- **MCP** — the same compiled index, exposed as tools over MCP for whatever agent you already run: Claude Code, Cursor, or your own harness. `pip install benzi`, then point your MCP client at `benzi-mcp`. This is the benzi index without the agentic loop — output quality will depend on your agent/harness.
-- **Headless** — the same agent as VS Code, from your own terminal: `pip install benzi`, then `benzi-headless <repo> "your question"`. This is Benzi for scripts and CI — no editor needed. (https://pypi.org/project/benzi/)
 
-Run `benzi-login` once to authenticate before using the VS Code extension, MCP, or headless — the same command lets you update your model or key again later too. VS Code also has a Benzi settings panel in the left sidebar: use it to log in or update your email, model or key. All surfaces share the same config: log in once and VS Code, MCP and headless all use it.
+**pip MCP/CLI** — the compiled index over MCP for the agent you already run, or the full Benzi agent from your terminal. [PyPI](https://pypi.org/project/benzi/)
+
+```bash
+pip install benzi
+```
+
+Python 3.11–3.14 on Windows, macOS and Linux. Installs the `benzi-login`, `benzi-mcp` and `benzi-headless` commands.
+
+**1. Log in** — emails you a one-time code, then saves your key. The same login works in VS Code.
+
+```bash
+benzi-login --login you@example.com
+benzi-login --anthropic-key YOUR_KEY      # or: benzi-login --nonanthropic-key YOUR_KEY
+```
+
+**2. Give your agent Benzi's map** — serves the compiled index as tools to Claude Code, Cursor or any MCP client. This is the index without Benzi's agent loop, so output quality depends on your agent.
+
+```bash
+benzi-mcp
+```
+
+**3. Or run the full agent** — point it at a repo from the terminal, for scripts and CI.
+
+```bash
+benzi-headless . "fix the failing test in parser.py"
+```
+
+VS Code also has a Benzi settings panel in the left sidebar: use it to log in or update your email, model or key. All surfaces share the same config: log in once and VS Code, MCP and headless all use it.
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
