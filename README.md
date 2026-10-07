@@ -33,6 +33,8 @@
   <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_benchmarks.png" width="149" alt="Benchmarks"></a>
 </p>
 
+<p align="center"><sub>Like where this is headed? A ⭐ goes a long way.</sub></p>
+
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
 <div align="center">
