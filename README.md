@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner_v3.png" width="1000" alt="Benzi -- compiler-backed code intelligence">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner_v3.png" width="1000" alt="Benzi -- Compiler-backed AI coding agent">
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@
 <br>[Language support](#language-support) — ten languages, and where the depth is uneven
 <br>[Getting started](#getting-started) — the Benzi agent (VS Code or headless), or the compiler over MCP
 <br>[What people say](#what-people-say) — what people wrote about it
-<br>[SWE-bench Verified](#swe-bench-verified) — 391/500 (78.2%) for $37.33
+<br>[SWE-bench Verified](#swe-bench-verified) — 412/500 (82.4%) for $12.96
 <br>[How it works](#how-it-works) — compile, query, edit, verify
 <br>[Tools](#tools) — 16 of the 35+ the index makes possible
 <br>[What the index actually changes](#what-the-index-actually-changes) — lines read vs three other harnesses
@@ -193,23 +193,23 @@ VS Code's settings panel and `benzi-login` share one config: log in once, and VS
 
 ### <u>SWE-bench Verified</u>
 
-The full SWE-bench Verified set — 500 real GitHub issues from twelve Python repositories — run end to end on **DeepSeek v4-flash**, one attempt per instance, graded by the official `swebench.harness.run_evaluation` inside its own per-instance Docker images, with network access to GitHub and PyPI blocked inside every container.
+The full SWE-bench Verified set — 500 real GitHub issues from twelve Python repositories — run end to end on **DeepSeek V4.1-Flash**, one attempt per instance, graded by the official `swebench.harness.run_evaluation` inside its own per-instance Docker images, with network access to GitHub and PyPI blocked inside every container.
 
 <div align="center">
 
 | | |
 |:---:|:---:|
-| **Resolved** | **391 / 500 — 78.2%** |
-| Total cost, all 500 instances | $37.33 |
-| Cost per instance resolved | $0.095 |
-| Source lines read (total / median) | 231,574 / 379 |
-| Model turns (total / median) | 16,091 / 27 |
-| Input tokens served from cache | 97% |
-| Output tokens | 22.0M |
+| **Resolved** | **412 / 500 — 82.4%** |
+| Total cost, all 500 instances | $12.96 |
+| Cost per instance resolved | $0.031 |
+| Attempts per instance | 1 (pass@1) |
+| Model turns (total / median) | 14,167 / 21.5 |
+| Input tokens served from cache | 97.6% |
+| Output tokens | 13.5M |
 
 </div>
 
-Full technical report: [swebench/SWE_BENCH_REPORT.md](swebench/SWE_BENCH_REPORT.md) ([web version](https://varianttech.net/report)). Every instance's cost, tokens, turns, and lines read: [varianttech.net/benchmark_swebench](https://varianttech.net/benchmark_swebench). The cross-harness efficiency comparison below (and the full 24-bug chart): [varianttech.net/benchmark](https://varianttech.net/benchmark).
+Full technical report: [swebench-october/SWE_BENCH_REPORT.md](swebench-october/SWE_BENCH_REPORT.md) ([web version](https://varianttech.net/report)). Every instance's cost, tokens and turns: [varianttech.net/benchmark_swebench](https://varianttech.net/benchmark_swebench). The cross-harness efficiency comparison below (and the full 24-bug chart): [varianttech.net/benchmark](https://varianttech.net/benchmark).
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
@@ -339,4 +339,4 @@ On CodeGraph's own benchmark (their repos, their questions, their methodology), 
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
-<p align="center"><sub>by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icons/variant_logo_circle.png" width="16" alt=""> <b>Variant Technologies</b></sub></p>
+<p align="center"><sub>by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icons/variant_logo_square.png" width="16" alt=""> <b>Variant Technologies</b></sub></p>
