@@ -1,0 +1,86 @@
+# Trajectory: django__django-15930
+
+- model: deepseek-v4-flash
+- turns: 65
+- tool calls: 78
+
+## Tool-call sequence (recorded during inference)
+
+- turn 1: `benzi_grep` django/db/models
+- turn 1: `search_symbols` ['as_sql', 'WhereNode', 'CASE', 'conditional']
+- turn 2: `read_source` django/db/models/sql/where.py::WhereNode#Class.as_sql#Functi
+- turn 2: `read_source` django/db/models/expressions.py::Case#Class.as_sql#Function
+- turn 3: `read_source` django/db/models/expressions.py::When#Class.as_sql#Function
+- turn 3: `skim_source` django/db/models/expressions.py::When#Class
+- turn 4: `read_source` django/db/models/expressions.py::When#Class.resolve_expressi
+- turn 4: `read_source` django/db/models/expressions.py::Case#Class
+- turn 5: `benzi_grep` tests
+- turn 5: `benzi_grep` django/db/models
+- turn 6: `read_source` tests/annotations/tests.py
+- turn 6: `read_source` tests/expressions_case/tests.py
+- turn 7: `shell` git log --oneline -3; cat django/__init__.py | head -5
+- turn 7: `read_source` django/db/models/expressions.py::When#Class.__init__#Functio
+- turn 8: `read_source` django/db/models/expressions.py::ExpressionWrapper#Class.as_
+- turn 8: `search_symbols` ['ExpressionWrapper', 'WhereNode.as_sql', 'Expression#as_sql
+- turn 9: `read_source` django/db/models/query_utils.py::Q#Class
+- turn 10: `benzi_grep` django/db/models/sql/compiler.py
+- turn 10: `benzi_grep` django/db/models/sql
+- turn 11: `read_source` django/db/models/sql/compiler.py::SQLCompiler#Class.get_sele
+- turn 12: `read_source` django/db/models/sql/query.py::Query#Class._add_q#Function
+- turn 12: `read_source` django/db/models/sql/where.py::WhereNode#Class
+- turn 13: `benzi_grep` django/db/models/sql/query.py
+- turn 14: `read_source` django/db/models/sql/query.py::Query#Class.build_filter#Func
+- turn 15: `benzi_grep` django/db/models/sql
+- turn 16: `benzi_grep` django/db/models/sql/query.py
+- turn 17: `read_source` django/db/models/expressions.py::ExpressionWrapper#Class
+- turn 17: `read_source` django/db/models/sql/where.py
+- turn 18: `shell` cd /home/user 2>/dev/null; pwd; ls; python -c "import django
+- turn 19: `shell` cd /testbed && python tests/runtests.py annotations.tests.No
+- turn 20: `shell` cd /testbed && cat tests/test_sqlite.py 2>/dev/null; echo --
+- turn 21: `create_file` tests/annotations/test_scratch_benzi.py
+- turn 22: `shell` cd /testbed && python tests/runtests.py annotations.test_scr
+- turn 23: `benzi_grep` django/db/models/sql
+- turn 23: `benzi_grep` django/db/models
+- turn 24: `read_source` django/db/models/sql/query.py::Query#Class.build_filter#Func
+- turn 25: `edit_lines` tests/annotations/test_scratch_benzi.py
+- turn 26: `edit_lines` tests/annotations/test_scratch_benzi.py
+- turn 27: `delete_file` tests/annotations/test_scratch_benzi.py
+- turn 28: `benzi_grep` django/db/models/sql/compiler.py
+- turn 28: `benzi_grep` django/db/models/sql
+- turn 29: `create_file` tests/annotations/test_scratch_benzi.py
+- turn 30: `shell` cd /testbed && python tests/runtests.py annotations.test_scr
+- turn 31: `benzi_grep` django/db/models/lookups.py
+- turn 32: `read_source` django/db/models/lookups.py::In#Class
+- turn 33: `create_file` tests/annotations/test_scratch_benzi.py
+- turn 34: `edit_lines` tests/annotations/test_scratch_benzi.py
+- turn 35: `shell` cd /testbed && python tests/runtests.py annotations.test_scr
+- turn 36: `benzi_grep` django/db/models/expressions.py
+- turn 37: `read_source` django/db/models/sql/compiler.py::SQLCompiler#Class.get_sele
+- turn 38: `edit_lines` tests/annotations/test_scratch_benzi.py
+- turn 39: `shell` cd /testbed && python tests/runtests.py annotations.test_scr
+- turn 40: `benzi_grep` django/db/models/expressions.py
+- turn 41: `benzi_grep` django/db/models/sql/query.py
+- turn 42: `benzi_grep` django/db/models/fields
+- turn 43: `shell` cd /testbed && git log --all --oneline | wc -l; git log --al
+- turn 44: `shell` cd /testbed && git tag | tail -20; echo ---; git branch -a |
+- turn 45: `read_source` django/db/models/expressions.py::Exists#Class
+- turn 46: `shell` find / -path /proc -prune -o -name "expressions.py" -path "*
+- turn 47: `delete_file` tests/annotations/test_scratch_benzi.py
+- turn 48: `read_source` django/db/models/expressions.py::When#Class.as_sql#Function
+- turn 49: `edit_lines` django/db/models/expressions.py
+- turn 50: `create_file` tests/annotations/test_scratch_benzi.py
+- turn 51: `shell` cd /testbed && python tests/runtests.py annotations.test_scr
+- turn 52: `edit_lines` tests/annotations/test_scratch_benzi.py
+- turn 53: `benzi_grep` tests/annotations/models.py
+- turn 54: `read_source` tests/annotations/models.py
+- turn 55: `delete_file` tests/annotations/test_scratch_benzi.py
+- turn 56: `create_file` tests/annotations/test_scratch_benzi.py
+- turn 57: `shell` cd /testbed && python tests/runtests.py annotations.test_scr
+- turn 58: `delete_file` tests/annotations/test_scratch_benzi.py
+- turn 59: `shell` cd /testbed && python tests/runtests.py expressions_case ann
+- turn 60: `read_source` django/db/models/expressions.py::When#Class.as_sql#Function
+- turn 60: `shell` cd /testbed && git diff
+- turn 61: `shell` cd /testbed && python tests/runtests.py expressions aggregat
+- turn 62: `shell` cd /testbed && python tests/runtests.py expressions aggregat
+- turn 63: `shell` cd /testbed && git status --short
+- turn 64: `remember` 

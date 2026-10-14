@@ -1,0 +1,67 @@
+# Trajectory: django__django-11149
+
+- model: deepseek-v4-flash
+- turns: 45
+- tool calls: 59
+
+## Tool-call sequence (recorded during inference)
+
+- turn 1: `read_reference` artifact
+- turn 1: `search_symbols` 
+- turn 1: `search_symbols` get_inline_formsets
+- turn 2: `search_symbols` ["has_change_permission", "has_add_permission", "has_view_pe
+- turn 3: `search_symbols` has_change_permission
+- turn 3: `search_symbols` get_inline_formsets
+- turn 3: `search_symbols` _create_formsets
+- turn 4: `read_source` django/contrib/admin/options.py::ModelAdmin#Class.get_inline
+- turn 4: `read_source` django/contrib/admin/options.py::InlineModelAdmin#Class.has_
+- turn 5: `read_source` django/contrib/admin/options.py
+- turn 6: `benzi_grep` tests/admin_inlines
+- turn 6: `benzi_grep` tests/admin_inlines
+- turn 7: `benzi_grep` tests/admin_inlines
+- turn 7: `benzi_grep` tests/admin_inlines
+- turn 8: `benzi_grep` tests
+- turn 8: `benzi_grep` tests/admin_inlines
+- turn 9: `get_definition` tests/admin_inlines/tests.py::TestInlinePermissions#Class
+- turn 10: `read_source` tests/admin_inlines/tests.py
+- turn 11: `shell` git log --oneline -5 && echo "---STATUS---" && git status &&
+- turn 12: `read_source` django/contrib/admin/helpers.py::InlineAdminFormSet#Class
+- turn 13: `shell` cd /tmp && pip download django==3.0 --no-deps --no-binary :a
+- turn 14: `read_source` tests/admin_inlines/admin.py
+- turn 14: `get_definition` django/contrib/admin/options.py::InlineModelAdmin#Class
+- turn 15: `shell` find / -name "options.py" -path "*contrib/admin*" 2>/dev/nul
+- turn 16: `shell` git log --all --oneline | head -20; echo "---TAGS---"; git t
+- turn 17: `shell` cat django/__init__.py | head -10; echo "---"; grep -rn "307
+- turn 18: `shell` ls -la /; echo "---"; find / -maxdepth 3 \( -name "*.patch" 
+- turn 19: `shell` cat /problem.txt; echo "===TESTBED==="; ls -la /testbed; ech
+- turn 20: `read_source` django/contrib/admin/options.py
+- turn 21: `shell` find / -path /proc -prune -o \( -name "*.whl" -o -name "Djan
+- turn 22: `benzi_grep` django/forms/models.py
+- turn 22: `search_symbols` BaseInlineFormSet
+- turn 23: `read_source` django/contrib/admin/options.py
+- turn 23: `read_source` django/contrib/admin/options.py
+- turn 24: `search_symbols` get_formsets_with_inlines
+- turn 25: `read_source` django/contrib/admin/options.py
+- turn 25: `benzi_grep` django/contrib/admin/helpers.py
+- turn 26: `read_source` django/forms/models.py
+- turn 26: `search_symbols` get_inline_instances
+- turn 27: `benzi_grep` django/contrib/admin
+- turn 28: `read_source` django/contrib/admin/options.py
+- turn 28: `read_source` django/contrib/admin/options.py
+- turn 29: `read_source` django/contrib/admin/options.py
+- turn 30: `edit_lines` django/contrib/admin/options.py
+- turn 31: `shell` cd /testbed 2>/dev/null || cd "$(pwd)"; pwd; python tests/ru
+- turn 32: `shell` cd /testbed; python tests/runtests.py admin_inlines.tests.Te
+- turn 33: `create_file` tests/admin_inlines/test_tmp_viewperm.py
+- turn 34: `shell` cd /testbed; python tests/runtests.py admin_inlines.test_tmp
+- turn 35: `benzi_grep` django/contrib/admin/templates/admin/edit_inline
+- turn 35: `benzi_grep` django/contrib/admin
+- turn 36: `edit_lines` tests/admin_inlines/test_tmp_viewperm.py
+- turn 37: `delete_file` tests/admin_inlines/test_tmp_viewperm.py
+- turn 38: `create_file` tests/admin_inlines/test_tmp_viewperm.py
+- turn 39: `shell` cd /testbed; python tests/runtests.py admin_inlines.test_tmp
+- turn 40: `delete_file` tests/admin_inlines/test_tmp_viewperm.py
+- turn 41: `shell` cd /testbed; python tests/runtests.py admin_inlines admin_vi
+- turn 42: `read_source` django/contrib/admin/options.py
+- turn 43: `shell` cd /testbed; git status --porcelain; echo "---DIFF---"; git 
+- turn 44: `remember` 
