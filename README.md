@@ -23,8 +23,6 @@
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner_v3.png" width="1000" alt="Benzi -- Compiler-backed AI coding agent">
 </p>
 
-<p align="center"><a href="https://varianttech.net">varianttech.net</a></p>
-
 <p align="center">
   <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_demo.png" width="140" alt="Demo"></a>
   <br>
@@ -314,4 +312,4 @@ On CodeGraph's own benchmark (their repos, their questions, their methodology), 
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
-<p align="center"><sub>by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icons/variant_logo_square.png" width="16" alt=""> <b>Variant Technologies</b></sub></p>
+<p align="center"><sub>by <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/icons/variant_logo_square.png" width="16" alt=""> <b>Variant Technologies</b> · <a href="https://varianttech.net">varianttech.net</a></sub></p>
