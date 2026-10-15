@@ -182,20 +182,6 @@ The full SWE-bench Verified set — 500 real GitHub issues from twelve Python re
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/swebench_cost_comparison.png" width="1000" alt="Benzi, compiler-backed coding agent, scores 82.4% on SWE-bench Verified for $12.96 in total, next to DeepSeek V4-Pro-Max, Gemini 3.1 Pro and GPT-5.6 Sol">
 </p>
 
-<div align="center">
-
-| | |
-|:---:|:---:|
-| **Resolved** | **412 / 500 — 82.4%** |
-| Total cost, all 500 instances | $12.96 |
-| Cost per instance resolved | $0.031 |
-| Attempts per instance | 1 (pass@1) |
-| Model turns (total / median) | 14,167 / 21.5 |
-| Input tokens served from cache | 97.6% |
-| Output tokens | 13.5M |
-
-</div>
-
 Full technical report: [swebench-october/SWE_BENCH_REPORT.md](swebench-october/SWE_BENCH_REPORT.md) ([web version](https://varianttech.net/report)). Every instance's cost, tokens and turns: [varianttech.net/benchmark_swebench](https://varianttech.net/benchmark_swebench). The cross-harness efficiency comparison below (and the full 24-bug chart): [varianttech.net/benchmark](https://varianttech.net/benchmark).
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
