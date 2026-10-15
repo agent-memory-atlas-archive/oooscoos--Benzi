@@ -43,7 +43,6 @@
 <br>[Live demos](#live-demos) — StallionSwipe, or any repo you paste
 <br>[Language support](#language-support) — ten languages, and where the depth is uneven
 <br>[Getting started](#getting-started) — the Benzi agent (VS Code or headless), or the compiler over MCP
-<br>[What people say](#what-people-say) — what people wrote about it
 <br>[SWE-bench Verified](#swe-bench-verified) — 412/500 (82.4%) for $12.96
 <br>[How it works](#how-it-works) — compile, query, edit, verify
 <br>[Tools](#tools) — 16 of the 35+ the index makes possible
@@ -172,22 +171,6 @@ Benzi is completely free to use during beta. There are two ways to use it, and t
    ```
 
 VS Code's settings panel and `benzi-login` share one config: log in once, and VS Code, headless and MCP all use it.
-
-<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
-
-### <u>What people say</u>
-
-> "78.2% for $37 is a slap in the face to the 'brute force wins' school."
-> — Alex Xiang, [**zicode**](https://zicode.com/blog/ai-coding-supply-chain/) *(translated)*
-
-> "Benzi is proving that the core competency of coding tools is shifting from simple 'reading comprehension' to 'structural grasping ability.'"
-> — Gi Pyeong Lee, [**Tech Blog**](https://gipyeong-lee.github.io/2026/09/11/Show-HN-Benzi-A-Code-IntillegenceHarness-Beating-Claude-Code-and-CodeGraph.en/)
-
-> "Fewer tokens, no context drift. Wild idea, honestly."
-> — [**prompt 🤖 AI News**](https://t.me/prompt/392)
-
-> "It analyzes changes before writing them — and beats Claude Code on benchmarks."
-> — [**Ponte al dIA**](https://ponte-al-dia.com/p/benzi-agente-de-codigo-que-supera-a-claude-sonnet-en-tareas-de-programacion) *(translated)*
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
