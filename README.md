@@ -68,6 +68,8 @@ You can try pasting this repo's link to Benzi in the [live demo](https://variant
   <sub>Benzi on SQLite</sub>
 </p>
 
+<p align="center"><sub>Like where this is headed? A ⭐ goes a long way.</sub></p>
+
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
 ### <u>Live demos</u>
