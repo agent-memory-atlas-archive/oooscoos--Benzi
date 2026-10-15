@@ -9,8 +9,6 @@
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark_raleway_400.png" width="140" alt="benzi">
 </p>
 
-<p align="center"><a href="https://varianttech.net">varianttech.net</a></p>
-
 <p align="center">Language Agnostic · Model Agnostic · Compiles Locally · BYOK · MCP Compatible</p>
 
 <p align="center">
@@ -24,6 +22,8 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_banner_v3.png" width="1000" alt="Benzi -- Compiler-backed AI coding agent">
 </p>
+
+<p align="center"><a href="https://varianttech.net">varianttech.net</a></p>
 
 <p align="center">
   <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_demo.png" width="140" alt="Demo"></a>
