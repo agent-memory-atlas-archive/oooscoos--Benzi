@@ -195,6 +195,10 @@ VS Code's settings panel and `benzi-login` share one config: log in once, and VS
 
 The full SWE-bench Verified set — 500 real GitHub issues from twelve Python repositories — run end to end on **DeepSeek V4.1-Flash**, one attempt per instance, graded by the official `swebench.harness.run_evaluation` inside its own per-instance Docker images, with network access to GitHub and PyPI blocked inside every container.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/swebench_cost_comparison.png" width="1000" alt="Benzi, compiler-backed coding agent, scores 82.4% on SWE-bench Verified for $12.96 in total, next to DeepSeek V4-Pro-Max, Gemini 3.1 Pro and GPT-5.6 Sol">
+</p>
+
 <div align="center">
 
 | | |
