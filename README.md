@@ -9,6 +9,8 @@
   <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/benzi_wordmark_raleway_400.png" width="140" alt="benzi">
 </p>
 
+<p align="center"><a href="https://varianttech.net">varianttech.net</a></p>
+
 <p align="center">Language Agnostic · Model Agnostic · Compiles Locally · BYOK · MCP Compatible</p>
 
 <p align="center">
