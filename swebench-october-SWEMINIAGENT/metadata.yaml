@@ -1,0 +1,8 @@
+name: mini-swe-agent 2.4.6
+org: Variant Technologies (baseline run)
+model: DeepSeek V4.1-Flash
+site: https://github.com/SWE-agent/mini-swe-agent
+oss: true
+verified: false
+trajs: true
+logs: false
