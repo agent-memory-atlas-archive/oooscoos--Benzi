@@ -24,9 +24,9 @@
 </p>
 
 <p align="center">
-  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_instant_demo.png" width="214" alt="Instant Demo"></a>
+  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_instant_demo.png" width="172" alt="Instant Demo"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://varianttech.net/about"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_website.png" width="138" alt="Website"></a>
+  <a href="https://varianttech.net/about"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_website_v2.png" width="138" alt="Website"></a>
 </p>
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
