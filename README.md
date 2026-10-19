@@ -42,9 +42,9 @@
 <br>— [SWE-bench Verified](#swe-bench-verified) —
 <br>— [How it works](#how-it-works) —
 <br>— [Tools](#tools) —
-<br>— [What the index actually changes](#what-the-index-actually-changes) —
+<br>— [Benzi vs CC, DSH, OC](#what-the-index-actually-changes) —
 <br>— [Features](#features) —
-<br>— [FAQ & comparisons](#faq) —
+<br>— [FAQ and Benzi's map vs LSP/SCIP indexers](#faq) —
 
 </div>
 
