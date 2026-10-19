@@ -41,9 +41,9 @@
 <br>— [Getting started](#getting-started) —
 <br>— [SWE-bench Verified](#swe-bench-verified) —
 <br>— [How it works](#how-it-works) —
-<br>— [Tools](#tools) —
-<br>— [Benzi vs CC, DSH, OC](#what-the-index-actually-changes) —
+<br>— [Toolset](#toolset) —
 <br>— [Features](#features) —
+<br>— [Benzi vs CC, DSH, OC](#what-the-index-actually-changes) —
 <br>— [FAQ and Benzi's map vs LSP/SCIP indexers](#faq) —
 
 </div>
@@ -196,9 +196,9 @@ Full technical report: [swebench-october/SWE_BENCH_REPORT.md](swebench-october/S
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
-### <u>Tools</u>
+### <u>Toolset</u>
 
-A sample of 16 of Benzi's 35+ tools — what falls out of actually resolving the code, from the index itself to the gates on every write.
+16 of Benzi's 35+ tools. Full tool list [here](https://varianttech.net/temp/benzi_tools_list.txt).
 
 <div align="center">
 
@@ -222,6 +222,17 @@ A sample of 16 of Benzi's 35+ tools — what falls out of actually resolving the
 | `upgrade_to_pro` | Escalates itself to a larger reasoning budget mid-task. |
 
 </div>
+
+<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
+
+### <u>Features</u>
+
+- **Six states, never a guess** — every call site and every file carries one: **resolved** (proven in-repo edge), **external** (into a library, with the import evidence), **candidate** (ambiguous — the bounded set of possible targets, kept in full), **unresolved** (seen but not settled, carrying *why*), **observed** (confirmed by an actual run), **unindexed** (never parsed, with the reason). One rule throughout: whatever static analysis can't settle is flagged as unsettled rather than guessed — and running the program is what settles it.
+- **Runtime tracer** — hooks every call during execution and overlays the observations back onto the static map.
+- **Reasoning you can click** — the same map that drives the tools drives a live call graph beside the chat; when the agent names a function, that node lights up.
+- **Persistent memory** — durable per-repo facts survive restarts; conventions learned once aren't re-derived every session.
+- **Dual-engine: code + markup** — a separate index for HTML/CSS/DOM-JS with cascade resolution and selector specificity, including frontend embedded inside Python strings.
+- **Model-agnostic** — Anthropic, OpenAI, or any compatible API; the agent can escalate itself to a larger model mid-task when a problem outgrows the one running it.
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
@@ -261,17 +272,6 @@ Wall-clock time tracks close across all four — reading less doesn't make Benzi
 Benzi on DeepSeek costs about a cent a bug; Claude Code climbs to $0.18 a step as bugs get harder — roughly 18x.
 
 More detail, per-bug breakdowns, and full methodology: [varianttech.net/benchmark](https://varianttech.net/benchmark).
-
-<img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
-
-### <u>Features</u>
-
-- **Six states, never a guess** — every call site and every file carries one: **resolved** (proven in-repo edge), **external** (into a library, with the import evidence), **candidate** (ambiguous — the bounded set of possible targets, kept in full), **unresolved** (seen but not settled, carrying *why*), **observed** (confirmed by an actual run), **unindexed** (never parsed, with the reason). One rule throughout: whatever static analysis can't settle is flagged as unsettled rather than guessed — and running the program is what settles it.
-- **Runtime tracer** — hooks every call during execution and overlays the observations back onto the static map.
-- **Reasoning you can click** — the same map that drives the tools drives a live call graph beside the chat; when the agent names a function, that node lights up.
-- **Persistent memory** — durable per-repo facts survive restarts; conventions learned once aren't re-derived every session.
-- **Dual-engine: code + markup** — a separate index for HTML/CSS/DOM-JS with cascade resolution and selector specificity, including frontend embedded inside Python strings.
-- **Model-agnostic** — Anthropic, OpenAI, or any compatible API; the agent can escalate itself to a larger model mid-task when a problem outgrows the one running it.
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
