@@ -29,8 +29,6 @@
   <a href="https://varianttech.net/about"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta2_website.png" width="138" alt="Website"></a>
 </p>
 
-<p align="center"><i>(Benzi is free to use during beta)</i></p>
-
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
 <div align="center">
@@ -56,7 +54,7 @@
 
 Most AI coding agents grep and glob raw source code into AI model's context window and hope the model finds what matters. Benzi parses every file first — a real compiler, built on tree-sitter — into a precise, queryable map. Every symbol, every call edge, every reference, every class in its inheritance chain. One pass, done.
 
-Every file parsed, imports resolved, class ancestry built, every identifier traced to its definition — before a single question is answered. Call flow and data flow join at every call site, so a bad value traces to its origin in one tool call. Claude Code greps; Cursor embeds; Aider maps signatures; Benzi resolves — in O(1). Ten languages so far, plus a markup engine for HTML, CSS, and DOM-JS — see [Language support](#language-support).
+Every file parsed, imports resolved, class ancestry built, every identifier traced to its definition — before a single question is answered. Call flow and data flow join at every call site, so a bad value traces to its origin in one tool call. Claude Code greps; Cursor embeds; Aider maps signatures; Benzi resolves — in O(1). Ten languages so far, plus a markup engine for HTML, CSS, and DOM-JS — see [Language support](#language-support). Benzi is free to use during beta.
 
 You can try pasting this repo's link to Benzi in the [live demo](https://varianttech.net/demo) too!
 
