@@ -35,16 +35,16 @@
 
 ### <u>Contents</u>
 
-[What is Benzi](#what-is-benzi) — how it works in one paragraph
-<br>[Live demos](#live-demos) — StallionSwipe, or any repo you paste
-<br>[Language support](#language-support) — ten languages, and where the depth is uneven
-<br>[Getting started](#getting-started) — the Benzi agent (VS Code or headless), or the compiler over MCP
-<br>[SWE-bench Verified](#swe-bench-verified) — 412/500 (82.4%) for $12.96
-<br>[How it works](#how-it-works) — compile, query, edit, verify
-<br>[Tools](#tools) — 16 of the 35+ the index makes possible
-<br>[What the index actually changes](#what-the-index-actually-changes) — lines read vs three other harnesses
-<br>[Features](#features) — six states, runtime tracer, live call graph, memory, markup engine
-<br>[FAQ & comparisons](#faq) — privacy, pricing, limits, and how Benzi compares
+— [What is Benzi](#what-is-benzi) —
+<br>— [Live demos](#live-demos) —
+<br>— [Language support](#language-support) —
+<br>— [Getting started](#getting-started) —
+<br>— [SWE-bench Verified](#swe-bench-verified) —
+<br>— [How it works](#how-it-works) —
+<br>— [Tools](#tools) —
+<br>— [What the index actually changes](#what-the-index-actually-changes) —
+<br>— [Features](#features) —
+<br>— [FAQ & comparisons](#faq) —
 
 </div>
 
