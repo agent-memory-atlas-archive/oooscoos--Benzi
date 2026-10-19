@@ -240,6 +240,8 @@ Full technical report: [swebench-october/SWE_BENCH_REPORT.md](swebench-october/S
 
 Same 24 bugs, one run each, four harness/model combinations. **Lines read** counts only what came back from file-read calls — grep and shell output are search, not reading, so this is the one figure that means the same thing in every harness.
 
+More detail, per-bug breakdowns, and full methodology: [varianttech.net/benchmark](https://varianttech.net/benchmark).
+
 <div align="center">
 
 | Harness · model | Lines read | vs Benzi |
@@ -270,8 +272,6 @@ Wall-clock time tracks close across all four — reading less doesn't make Benzi
 </p>
 
 Benzi on DeepSeek costs about a cent a bug; Claude Code climbs to $0.18 a step as bugs get harder — roughly 18x.
-
-More detail, per-bug breakdowns, and full methodology: [varianttech.net/benchmark](https://varianttech.net/benchmark).
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
 
