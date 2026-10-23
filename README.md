@@ -24,13 +24,13 @@
 </p>
 
 <p align="center">
-  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta7_demo.png" width="129" alt="Instant Demo"></a>
+  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta8_demo.png" width="112" alt="Instant Demo"></a>
   <br>
-  <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta7_download.png" width="107" alt="Download"></a>
+  <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta8_download.png" width="94" alt="Download"></a>
   &nbsp;
-  <a href="#faq"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta7_faq.png" width="65" alt="FAQ"></a>
+  <a href="#faq"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta8_faq.png" width="61" alt="FAQ"></a>
   &nbsp;
-  <a href="https://varianttech.net/about"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta7_website.png" width="92" alt="Website"></a>
+  <a href="https://varianttech.net/benchmark"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta8_benchmarks.png" width="109" alt="Benchmarks"></a>
 </p>
 
 <img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/divider_gold.png" width="100%" alt="">
