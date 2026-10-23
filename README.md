@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta8_demo.png" width="112" alt="Instant Demo"></a>
+  <a href="https://varianttech.net/demo"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta9_demo.png" width="112" alt="Instant Demo"></a>
   <br>
   <a href="#getting-started"><img src="https://raw.githubusercontent.com/oooscoos/Benzi/main/assets/cta8_download.png" width="94" alt="Download"></a>
   &nbsp;
